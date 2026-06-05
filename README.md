@@ -8,8 +8,7 @@ Static website for Artisan's Finest, a small-batch Virginia extracts and spice b
 - `products.html` - product catalog page
 - `about.html` - brand story page
 - `contact.html` - contact form page
-- `css/styles.css` - shared styling
-- `js/main.js` - mobile navigation
+- Styling and mobile navigation are embedded directly in each HTML page
 - `images/` - local product and logo images
 
 ## Formspree
