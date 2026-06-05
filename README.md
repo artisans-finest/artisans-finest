@@ -1,6 +1,6 @@
 # Artisan's Finest Website
 
-Static website for Artisan's Finest, a small-batch Virginia extracts and spice blends brand by Hawksbill Court Cuisine.
+Static website for Artisan's Finest, a small-batch Virginia extracts and spice blends brand.
 
 ## Files
 
@@ -12,12 +12,10 @@ Static website for Artisan's Finest, a small-batch Virginia extracts and spice b
 - `js/main.js` - mobile navigation
 - `images/` - local product and logo images
 
-## Formspree Setup
+## Formspree
 
-Create a Formspree form named `Artisan's Finest Contact Form`, then replace this placeholder in `contact.html`:
+The contact form is connected to:
 
 ```html
-https://formspree.io/f/YOUR_FORM_ID_HERE
+https://formspree.io/f/mpqewgbw
 ```
-
-with the live endpoint from Formspree.
