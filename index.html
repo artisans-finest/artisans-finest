@@ -1,10 +1,100 @@
-const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.querySelector(".site-nav");
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Artisan's Finest | Small-Batch Extracts & Spice Blends</title>
+    <meta name="description" content="Artisan's Finest creates small-batch Virginia extracts, seasoning blends, BBQ rubs, and gift-worthy pantry staples.">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Artisan's Finest home">
+        <span class="brand-logo"><img src="images/logo.png" alt=""></span>
+        <span class="brand-text">Artisan's Finest</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="contact.html">Request Info</a>
+      </nav>
+    </header>
 
-if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", String(!isOpen));
-    siteNav.classList.toggle("is-open", !isOpen);
-  });
-}
+    <main>
+      <section class="hero">
+        <picture>
+          <source media="(max-width: 720px)" srcset="images/smokehouse-bundle.png">
+          <img src="images/bbq-regions.png" alt="Artisan's Finest BBQ Regions seasoning collection">
+        </picture>
+        <div class="hero-copy">
+          <p class="eyebrow">Virginia Small Batch</p>
+          <h1>Small-batch flavor, crafted in Virginia.</h1>
+          <p>Artisan's Finest makes handcrafted extracts, seasoning blends, BBQ rubs, and giftable kitchen staples with bold flavor and a maker's touch.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="products.html">Explore Products</a>
+            <a class="button secondary" href="contact.html">Ask About Orders</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band">
+        <div class="section-inner intro-grid">
+          <div>
+            <p class="eyebrow">Built For Real Kitchens</p>
+            <h2>Smokehouse roots, global inspiration, everyday ease.</h2>
+          </div>
+          <p>From BBQ regions and smokehouse bundles to salt-free seasoning and vanilla extract, the line is designed for home cooks, grill masters, gift boxes, markets, and local food lovers.</p>
+        </div>
+      </section>
+
+      <section class="section-inner feature-grid" aria-label="Featured collections">
+        <article class="feature-card large">
+          <img src="images/smokehouse-bundle.png" alt="Smoke House Bundle seasoning collection">
+          <div>
+            <p class="eyebrow">Featured Bundle</p>
+            <h2>Smoke House Bundle</h2>
+            <p>Low and slow blends with deep roast, smoky heat, and handcrafted barbecue character.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img src="images/global-grill.png" alt="Global Grill seasoning collection">
+          <h3>Global Grill Collection</h3>
+          <p>Bright, savory blends inspired by cooking traditions around the world.</p>
+        </article>
+        <article class="feature-card">
+          <img src="images/vanilla-extract.jpeg" alt="River Hill Distillery bourbon vanilla extract">
+          <h3>Vanilla Extract</h3>
+          <p>A rich pantry staple for bakers, coffee lovers, and thoughtful gifting.</p>
+        </article>
+      </section>
+
+      <section class="product-strip">
+        <div class="section-inner">
+          <p class="eyebrow">Small Batch Favorites</p>
+          <div class="strip-row">
+            <img src="images/fajita-taco.png" alt="Fajita taco seasoning">
+            <img src="images/maryland-seafood.png" alt="Maryland seafood seasoning">
+            <img src="images/roasted-veggie.png" alt="Roasted veggie seasoning">
+            <img src="images/caribbean-jerk.png" alt="Caribbean jerk seasoning">
+          </div>
+        </div>
+      </section>
+
+      <section class="section-inner split-cta">
+        <div>
+          <p class="eyebrow">Markets, Gifts & Custom Orders</p>
+          <h2>Have a flavor question or order idea?</h2>
+          <p>Send Chris a note about availability, bundles, local pickup, gift orders, or a blend you want to see next.</p>
+        </div>
+        <a class="button primary" href="contact.html">Contact Artisan's Finest</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Artisan's Finest</strong>
+        <p>Small-batch extracts and spice blends crafted by Artisan's Finest.</p>
