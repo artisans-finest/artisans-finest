@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Info | Artisan's Finest</title>
+  <meta name="description" content="Request product information, batch availability, or gift order details from Artisan's Finest.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Artisan's Finest logo">
+        <span>Artisan's Finest</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Request Info</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">Request Info</p>
+      <h1>Ask About Products, Batches, Or Gift Orders</h1>
+      <p>Use the form below to ask what is available, request a custom gift idea, or start a conversation about a larger order.</p>
+    </section>
+
+    <section class="section form-wrap">
+      <aside class="contact-panel">
+        <h2>How Requests Work</h2>
+        <p>Share what you are interested in, when you need it, and whether the order is for personal use, gifting, or an event.</p>
+        <p>Chris will follow up with current availability and next steps.</p>
+      </aside>
+
+      <form action="https://formspree.io/f/mpqewgbw" method="POST">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="interest">I am interested in</label>
+        <select id="interest" name="interest">
+          <option>Vanilla extract</option>
+          <option>Seasoning blends</option>
+          <option>BBQ rubs</option>
+          <option>Gift sets</option>
+          <option>Custom or larger order</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us what you are looking for, quantity, timing, and any gift details." required></textarea>
+
+        <button class="button" type="submit">Send Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong>Artisan's Finest</strong><br>Small-batch Virginia pantry goods</div>
+      <div><a href="products.html">View products</a></div>
+    </div>
+  </footer>
+</body>
+</html>
