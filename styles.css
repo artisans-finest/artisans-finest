@@ -716,6 +716,89 @@ textarea {
   color: var(--white);
 }
 
+.event-month-group {
+  margin-bottom: 32px;
+}
+
+.event-month-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.event-month-head {
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  font-size: 1.5rem;
+  color: var(--clay);
+  border-bottom: 2px solid var(--line);
+}
+
+.event-list {
+  display: grid;
+  gap: 12px;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.event-date {
+  text-align: center;
+  line-height: 1.08;
+}
+
+.event-mon {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--clay);
+}
+
+.event-day {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.event-body h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.event-loc {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.event-tag {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sage);
+  vertical-align: middle;
+}
+
+.event .badge {
+  margin-top: 0;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
 @media (max-width: 860px) {
   .nav {
     min-height: 92px;
