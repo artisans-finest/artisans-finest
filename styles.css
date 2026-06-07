@@ -863,6 +863,16 @@ textarea {
   font-size: 1.1rem;
 }
 
+.event-body h3 a {
+  color: var(--clay);
+  text-decoration: none;
+}
+
+.event-body h3 a:hover,
+.event-body h3 a:focus-visible {
+  text-decoration: underline;
+}
+
 .event-loc {
   margin: 4px 0 0;
   color: var(--muted);
