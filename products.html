@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Products | Artisan's Finest</title>
-  <meta name="description" content="Explore Artisan's Finest extracts, seasoning blends, BBQ rubs, and giftable pantry staples.">
+  <meta name="description" content="Browse Artisan's Finest by category: vanilla and extracts, sugar- and salt-free seasonings, signature BBQ rubs, heritage sausage blends, and gift sets.">
   <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -29,83 +29,116 @@
     <section class="page-hero">
       <p class="eyebrow">Products</p>
       <h1>Flavorful Staples For Cooking, Grilling, And Gifting</h1>
-      <p>Browse current Artisan's Finest items. Availability may vary by batch, season, and request size.</p>
+      <p>Browse by category below. Availability may vary by batch, season, and request size.</p>
     </section>
 
     <section class="section">
-      <div class="product-grid">
-        <article class="product-card">
-          <img src="images/vanilla-extract.png" alt="Vanilla extract">
-          <div>
-            <h3>Vanilla Extract</h3>
-            <p>Warm, aromatic extract for baking, desserts, coffee drinks, and holiday gifts.</p>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="images/smokehouse-bundle.png" alt="Smokehouse BBQ bundle">
-          <div>
-            <h3>Smokehouse Bundle</h3>
-            <p>A grill-focused set for ribs, pork, chicken, burgers, vegetables, and cookout baskets.</p>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="images/bbq-regions.png" alt="BBQ regions seasoning set">
-          <div>
-            <h3>BBQ Regions</h3>
-            <p>Regional-style seasoning profiles for cooks who like to compare smoke, tang, heat, and sweetness.</p>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="images/maryland-seafood.png" alt="Maryland seafood seasoning">
-          <div>
-            <h3>Maryland Seafood</h3>
-            <p>A seafood-friendly blend for shrimp, crab cakes, fish, fries, roasted corn, and snacks.</p>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="images/fajita-taco.png" alt="Fajita and taco seasoning">
-          <div>
-            <h3>Fajita &amp; Taco</h3>
-            <p>A weeknight-ready blend for tacos, fajitas, beans, rice bowls, and sheet-pan dinners.</p>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="images/caribbean-jerk.png" alt="Caribbean jerk seasoning">
-          <div>
-            <h3>Caribbean Jerk</h3>
-            <p>Warm spice and gentle heat for grilled chicken, pork, shrimp, vegetables, and marinades.</p>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="images/mediterranean.png" alt="Mediterranean seasoning">
-          <div>
-            <h3>Mediterranean</h3>
-            <p>Herb-forward seasoning for chicken, fish, potatoes, dips, dressings, and roasted vegetables.</p>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="images/roasted-veggie.png" alt="Roasted veggie seasoning">
-          <div>
-            <h3>Roasted Veggie</h3>
-            <p>A savory blend for sheet pans, soups, potatoes, mushrooms, and everyday vegetable sides.</p>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="images/global-grill.png" alt="Global Grill seasoning">
-          <div>
-            <h3>Global Grill</h3>
-            <p>A versatile grilling blend made for meats, vegetables, skewers, and outdoor cooking.</p>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="images/sugar-salt-free.png" alt="Sugar and salt free seasoning">
-          <div>
-            <h3>Sugar &amp; Salt Free</h3>
-            <p>A flexible seasoning option for cooks who want flavor without added sugar or salt.</p>
-          </div>
-        </article>
+      <div class="tabs" role="tablist" aria-label="Product categories">
+        <button class="tab" id="tab-vanilla" role="tab" aria-selected="true" aria-controls="panel-vanilla" tabindex="0">Vanilla &amp; Extracts</button>
+        <button class="tab" id="tab-ssf" role="tab" aria-selected="false" aria-controls="panel-ssf" tabindex="-1">Sugar &amp; Salt Free</button>
+        <button class="tab" id="tab-bbq" role="tab" aria-selected="false" aria-controls="panel-bbq" tabindex="-1">Signature BBQ Rubs</button>
+        <button class="tab" id="tab-sausage" role="tab" aria-selected="false" aria-controls="panel-sausage" tabindex="-1">Heritage Sausage Blends</button>
+        <button class="tab" id="tab-gifts" role="tab" aria-selected="false" aria-controls="panel-gifts" tabindex="-1">Gift Sets &amp; Bundles</button>
       </div>
-      <div class="note">For current batch availability, custom gift requests, or larger orders, use the request form and Chris & Becky will follow up with details.</div>
+
+      <section id="panel-vanilla" class="tab-panel" role="tabpanel" aria-labelledby="tab-vanilla" tabindex="0">
+        <div class="tab-panel-head">
+          <h2>Vanilla &amp; Extracts</h2>
+          <p>Small-batch vanillas for baking, drinks, desserts, and gifting.</p>
+        </div>
+        <div class="flavor-grid">
+          <article class="flavor"><h3>Pure Vanilla</h3></article>
+          <article class="flavor"><h3>Bourbon Vanilla</h3></article>
+          <article class="flavor"><h3>Reserve Batch Vanilla</h3></article>
+          <article class="flavor"><h3>Oak-Aged Vanilla</h3></article>
+          <article class="flavor"><h3>Golden Rum Vanilla</h3><span class="badge soon">Fall 2026</span></article>
+          <article class="flavor"><h3>Citrus Blossom Vanilla</h3><span class="badge season">Seasonal &middot; Spring 2027</span></article>
+          <article class="flavor"><h3>Blue Agave Vanilla</h3><span class="badge soon">Spring 2027</span></article>
+          <article class="flavor"><h3>Pumpkin Spice</h3><span class="badge season">Seasonal</span></article>
+          <article class="flavor"><h3>Winter Blend</h3><span class="badge season">Seasonal</span></article>
+        </div>
+      </section>
+
+      <section id="panel-ssf" class="tab-panel" role="tabpanel" aria-labelledby="tab-ssf" tabindex="0">
+        <div class="tab-panel-head">
+          <h2>Sugar &amp; Salt Free Seasonings</h2>
+          <p>Full-flavor blends for cooks who want taste without added sugar or salt.</p>
+        </div>
+        <div class="flavor-grid">
+          <article class="flavor"><h3>All Purpose</h3></article>
+          <article class="flavor"><h3>Ranch</h3></article>
+          <article class="flavor"><h3>Italian</h3></article>
+          <article class="flavor"><h3>Montreal Steak</h3></article>
+          <article class="flavor"><h3>Fajita &amp; Taco</h3></article>
+          <article class="flavor"><h3>Curry</h3></article>
+          <article class="flavor"><h3>Everything Bagel</h3></article>
+          <article class="flavor"><h3>Caribbean Jerk</h3></article>
+          <article class="flavor"><h3>Greek</h3></article>
+          <article class="flavor"><h3>Mediterranean</h3></article>
+          <article class="flavor"><h3>Garlic Herb</h3></article>
+          <article class="flavor"><h3>Citrus Herb</h3></article>
+          <article class="flavor"><h3>Roasted Vegetable</h3></article>
+          <article class="flavor"><h3>Creole</h3></article>
+          <article class="flavor"><h3>Maryland Seafood</h3></article>
+        </div>
+      </section>
+
+      <section id="panel-bbq" class="tab-panel" role="tabpanel" aria-labelledby="tab-bbq" tabindex="0">
+        <div class="tab-panel-head">
+          <h2>Signature BBQ Rubs</h2>
+          <p>Regional and specialty rubs for ribs, pork, chicken, brisket, and the grill.</p>
+        </div>
+        <div class="flavor-grid">
+          <article class="flavor"><h3>Texas</h3></article>
+          <article class="flavor"><h3>Memphis</h3></article>
+          <article class="flavor"><h3>Kansas City</h3></article>
+          <article class="flavor"><h3>Carolina</h3></article>
+          <article class="flavor"><h3>Coffee Ancho</h3></article>
+          <article class="flavor"><h3>Mesquite</h3></article>
+          <article class="flavor"><h3>Lemon Herb</h3></article>
+          <article class="flavor"><h3>Asian Sesame</h3></article>
+          <article class="flavor"><h3>Chipotle</h3></article>
+          <article class="flavor"><h3>Honey Dijon</h3></article>
+          <article class="flavor"><h3>Rib Dust</h3></article>
+          <article class="flavor"><h3>Smokehouse</h3></article>
+        </div>
+      </section>
+
+      <section id="panel-sausage" class="tab-panel" role="tabpanel" aria-labelledby="tab-sausage" tabindex="0">
+        <div class="tab-panel-head">
+          <h2>Heritage Sausage Blends</h2>
+          <p>Old-world seasoning blends for homemade sausage.</p>
+        </div>
+        <div class="coming">
+          <p><strong>Launching Fall 2026.</strong></p>
+          <p>Our Heritage Sausage Blends are in development. <a href="contact.html">Request info</a> to hear when they are available.</p>
+        </div>
+      </section>
+
+      <section id="panel-gifts" class="tab-panel" role="tabpanel" aria-labelledby="tab-gifts" tabindex="0">
+        <div class="tab-panel-head">
+          <h2>Gift Sets &amp; Bundles</h2>
+          <p>Ready-to-give sets and custom baskets for hosts, holidays, and clients.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/smokehouse-bundle.png" alt="Smokehouse BBQ bundle">
+            <div>
+              <h3>Smokehouse Bundle</h3>
+              <p>A grill-focused set for ribs, pork, chicken, burgers, vegetables, and cookout baskets.</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/bbq-regions.png" alt="A selection of Artisan's Finest seasonings">
+            <div>
+              <h3>Build Your Own Gift Set</h3>
+              <p>Mix vanillas, seasonings, and rubs into a custom basket. <a href="contact.html">Request a custom bundle</a> and we will put it together.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="note">For current batch availability, custom gift requests, or larger orders, use the request form and Chris &amp; Becky will follow up with details.</div>
     </section>
   </main>
 
@@ -115,5 +148,39 @@
       <div><a href="contact.html">Request product information</a></div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+      if (!tabs.length) return;
+
+      function select(tab, setFocus) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+          var panel = document.getElementById(t.getAttribute('aria-controls'));
+          if (panel) panel.hidden = !on;
+        });
+        if (setFocus) tab.focus();
+      }
+
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener('click', function () { select(tab); });
+        tab.addEventListener('keydown', function (e) {
+          var idx = null;
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') idx = (i + 1) % tabs.length;
+          else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') idx = (i - 1 + tabs.length) % tabs.length;
+          else if (e.key === 'Home') idx = 0;
+          else if (e.key === 'End') idx = tabs.length - 1;
+          if (idx !== null) { e.preventDefault(); select(tabs[idx], true); }
+        });
+      });
+
+      // Enhance: collapse to the selected tab only once JS is available.
+      // Without JS every panel stays visible, so the page is still fully usable.
+      select(tabs[0]);
+    })();
+  </script>
 </body>
 </html>

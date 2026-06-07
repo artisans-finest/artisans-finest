@@ -357,6 +357,122 @@ h3 {
   color: var(--muted);
 }
 
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-bottom: 2px solid var(--line);
+  margin-bottom: 28px;
+}
+
+.tab {
+  appearance: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  margin-bottom: -2px;
+}
+
+.tab:hover {
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.tab[aria-selected="true"] {
+  color: var(--ink);
+  background: var(--white);
+  border-color: var(--line);
+  border-bottom: 2px solid var(--white);
+}
+
+.tab:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.tab-panel:focus {
+  outline: none;
+}
+
+.tab-panel-head {
+  margin: 0 0 20px;
+}
+
+.tab-panel-head h2 {
+  margin: 0;
+}
+
+.tab-panel-head p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.flavor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.flavor {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.flavor h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
+.badge.season {
+  background: rgba(111, 125, 88, 0.14);
+  color: var(--sage);
+  border-color: rgba(111, 125, 88, 0.32);
+}
+
+.badge.soon {
+  background: rgba(201, 147, 62, 0.16);
+  color: #97681c;
+  border-color: rgba(201, 147, 62, 0.38);
+}
+
+.coming {
+  text-align: center;
+  padding: 44px 22px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.coming p {
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+.coming p:last-child {
+  margin-bottom: 0;
+}
+
 .form-wrap {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
