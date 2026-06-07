@@ -44,18 +44,136 @@
       <section id="panel-vanilla" class="tab-panel" role="tabpanel" aria-labelledby="tab-vanilla" tabindex="0">
         <div class="tab-panel-head">
           <h2>Vanilla &amp; Extracts</h2>
-          <p>Small-batch vanillas for baking, drinks, desserts, and gifting.</p>
+          <p>Small-batch vanillas for baking, drinks, desserts, and gifting. Select any variety for details.</p>
         </div>
         <div class="flavor-grid">
-          <article class="flavor"><h3>Pure Vanilla</h3></article>
-          <article class="flavor"><h3>Bourbon Vanilla</h3></article>
-          <article class="flavor"><h3>Reserve Batch Vanilla</h3></article>
-          <article class="flavor"><h3>Oak-Aged Vanilla</h3></article>
-          <article class="flavor"><h3>Golden Rum Vanilla</h3><span class="badge soon">Fall 2026</span></article>
-          <article class="flavor"><h3>Citrus Blossom Vanilla</h3><span class="badge season">Seasonal &middot; Spring 2027</span></article>
-          <article class="flavor"><h3>Blue Agave Vanilla</h3><span class="badge soon">Spring 2027</span></article>
-          <article class="flavor"><h3>Pumpkin Spice</h3><span class="badge season">Seasonal</span></article>
-          <article class="flavor"><h3>Winter Blend</h3><span class="badge season">Seasonal</span></article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Pure Vanilla</h3>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Pure Vanilla Extract</h3>
+              <p class="dialog-tag">Pure. Classic. Essential.</p>
+              <p>Crafted from premium vanilla beans and cold extracted for more than six months, our Pure Vanilla delivers the rich, familiar flavor that belongs in every kitchen. Smooth, balanced, and versatile, it enhances everything from cookies and cakes to whipped cream, coffee, oatmeal, and homemade ice cream.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Baking, desserts, coffee, pancakes, whipped cream, ice cream.</p>
+            </template>
+          </article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Bourbon Vanilla</h3>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Bourbon Vanilla Extract</h3>
+              <p class="dialog-tag">Rich Vanilla with a Kentucky Bourbon Influence.</p>
+              <p>Premium vanilla beans slowly extracted in bourbon create a deep, warm flavor profile with notes of oak, caramel, and toasted sweetness. Perfect for recipes where vanilla should be noticed rather than simply added.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Brownies, pecan pie, bread pudding, barbecue sauces, glazes, cocktails.</p>
+            </template>
+          </article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Reserve Batch Vanilla</h3>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Reserve Batch Vanilla Extract</h3>
+              <p class="dialog-tag">Our Most Refined Expression of Vanilla.</p>
+              <p>Reserve Batch represents the culmination of our small-batch extraction process. Rich vanilla character, remarkable smoothness, and exceptional versatility make it a favorite among serious bakers and home chefs alike.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Signature desserts, holiday baking, custards, frostings, gifting.</p>
+            </template>
+          </article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Oak-Aged Vanilla</h3>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Oak Aged Vanilla Extract</h3>
+              <p class="dialog-tag">Patiently Aged for Exceptional Character.</p>
+              <p>After extraction, this vanilla rests with toasted oak, creating additional layers of complexity and depth. The result is a smooth, sophisticated vanilla with subtle notes of barrel oak and warm spice.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Cheesecake, cr&egrave;me br&ucirc;l&eacute;e, coffee, bourbon cocktails, premium baked goods.</p>
+            </template>
+          </article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>River Hill Small Batch Bourbon Vanilla</h3>
+              <span class="badge soon">Limited Release</span>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>River Hill Very Small Batch Bourbon Vanilla</h3>
+              <p class="dialog-tag">A Rare Limited Release.</p>
+              <p>Created using locally sourced River Hill bourbon, this very small batch extract combines handcrafted vanilla with the character of a distinctive Virginia spirit. Rich, smooth, and increasingly scarce, each bottle represents a piece of Artisan&rsquo;s Finest history.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Premium baking, cocktails, gifting, collector&rsquo;s item.</p>
+            </template>
+          </article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Golden Rum Vanilla</h3>
+              <span class="badge soon">Fall 2026</span>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Golden Rum Vanilla</h3>
+              <p class="dialog-tag">Warm Caribbean Character Meets Premium Vanilla.</p>
+              <p>Extracted with rum to create notes of caramelized sugar, tropical warmth, and rich vanilla. Smooth and inviting, Golden Rum Vanilla shines in both baking and beverages.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Rum cakes, banana bread, French toast, coffee, tropical desserts.</p>
+            </template>
+          </article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Citrus Blossom Vanilla</h3>
+              <span class="badge season">Seasonal &middot; Spring 2027</span>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Citrus Blossom Vanilla</h3>
+              <p class="dialog-tag">Bright, Floral, and Unexpected. (Spring Release)</p>
+              <p>A unique blend of vanilla, citrus peels, and delicate floral notes. Light and refreshing while remaining unmistakably vanilla, Citrus Blossom brings a fresh perspective to baking and beverages.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Lemon desserts, pound cake, tea, fruit dishes, spring baking.</p>
+            </template>
+          </article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Blue Agave Vanilla</h3>
+              <span class="badge soon">Spring 2027</span>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Blue Agave Vanilla</h3>
+              <p class="dialog-tag">Bold. Distinctive. Southwestern Inspired.</p>
+              <p>Crafted with premium vanilla beans and blue agave spirits, this unique extract offers a flavor profile unlike traditional vanilla. The natural sweetness of agave enhances the richness of the vanilla while adding subtle earthy and herbal notes. Smooth and complex, it bridges the worlds of baking, grilling, and craft cocktails, with a clean finish that pairs well with chocolate, citrus, caramel, and spice-forward recipes.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Chocolate desserts, brownies, citrus cakes, grilled fruits, homemade ice cream, margarita-inspired cocktails, and Southwestern cuisine.</p>
+              <p class="dialog-notes"><strong>Flavor Notes:</strong> Rich vanilla &bull; Agave sweetness &bull; Light herbal undertones &bull; Smooth finish</p>
+            </template>
+          </article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Pumpkin Spice</h3>
+              <span class="badge season">Seasonal</span>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Pumpkin Spice Vanilla</h3>
+              <p class="dialog-tag">The Flavor of Fall in a Bottle.</p>
+              <p>Vanilla and traditional autumn spices come together to create a warm, comforting extract perfect for seasonal baking. Cinnamon, nutmeg, and clove notes complement rich vanilla for a true harvest flavor experience.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Pumpkin bread, muffins, coffee, cheesecake, holiday desserts.</p>
+            </template>
+          </article>
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Winter Blend</h3>
+              <span class="badge season">Seasonal</span>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Winter Blend Vanilla</h3>
+              <p class="dialog-tag">Crafted for the Holiday Season.</p>
+              <p>A festive blend of vanilla and warming seasonal spices designed for holiday baking and entertaining. Rich, aromatic, and comforting, it captures the flavors of gatherings around the table.</p>
+              <p class="dialog-uses"><strong>Best Uses:</strong> Christmas cookies, breads, cakes, hot cocoa, holiday cocktails.</p>
+            </template>
+          </article>
         </div>
       </section>
 
@@ -153,6 +271,11 @@
     </section>
   </main>
 
+  <dialog id="flavor-dialog" class="flavor-dialog" aria-labelledby="flavor-dialog-title">
+    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
+    <div class="dialog-body"></div>
+  </dialog>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <div><strong>Artisan's Finest</strong><br>Small-batch Virginia pantry goods</div>
@@ -191,6 +314,42 @@
       // Enhance: collapse to the selected tab only once JS is available.
       // Without JS every panel stays visible, so the page is still fully usable.
       select(tabs[0]);
+
+      // Flavor description popups.
+      var dialog = document.getElementById('flavor-dialog');
+      if (dialog && typeof dialog.showModal === 'function') {
+        var body = dialog.querySelector('.dialog-body');
+        var lastTrigger = null;
+
+        function openFlavor(trigger, tpl) {
+          lastTrigger = trigger;
+          body.innerHTML = '';
+          body.appendChild(tpl.content.cloneNode(true));
+          var heading = body.querySelector('h3');
+          if (heading) heading.id = 'flavor-dialog-title';
+          dialog.showModal();
+        }
+
+        function closeFlavor() {
+          dialog.close();
+        }
+
+        Array.prototype.forEach.call(document.querySelectorAll('.flavor-trigger'), function (trigger) {
+          var tpl = trigger.parentNode.querySelector('template');
+          if (!tpl) return;
+          trigger.addEventListener('click', function () { openFlavor(trigger, tpl); });
+        });
+
+        dialog.querySelector('.dialog-close').addEventListener('click', closeFlavor);
+        // Close when the backdrop (area outside the dialog box) is clicked.
+        dialog.addEventListener('click', function (e) {
+          if (e.target === dialog) closeFlavor();
+        });
+        // Restore focus to the tile that opened the dialog.
+        dialog.addEventListener('close', function () {
+          if (lastTrigger) { lastTrigger.focus(); lastTrigger = null; }
+        });
+      }
     })();
   </script>
 </body>
