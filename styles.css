@@ -467,17 +467,6 @@ h3 {
   outline: none;
 }
 
-.tab-prompt {
-  margin: 0;
-  padding: 28px 22px;
-  text-align: center;
-  color: var(--muted);
-  background: var(--white);
-  border: 1px dashed var(--line);
-  border-radius: 8px;
-  font-size: 1.02rem;
-}
-
 .tab-panel-head {
   margin: 0 0 20px;
 }
