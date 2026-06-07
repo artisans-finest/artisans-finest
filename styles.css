@@ -208,9 +208,10 @@ h3 {
 }
 
 .hero-photo {
-  width: min(540px, 100%);
-  aspect-ratio: 5 / 4;
-  object-fit: cover;
+  width: min(380px, 100%);
+  height: auto;
+  max-height: 64vh;
+  object-fit: contain;
   border-radius: 14px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
