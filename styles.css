@@ -281,8 +281,7 @@ h3 {
 }
 
 .split img {
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+  background: transparent;
 }
 
 .feature-list {
