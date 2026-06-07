@@ -19,6 +19,7 @@
   <meta name="twitter:description" content="Learn about Artisan's Finest, a Virginia small-batch pantry goods brand by Chris &amp; Becky.">
   <meta name="twitter:image" content="https://artisans-finest.github.io/artisans-finest/images/share-card.png">
   <link rel="icon" href="images/favicon.png">
+  <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,12 +27,12 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="Artisan's Finest logo">
+        <img src="images/logo.webp" alt="Artisan's Finest logo" width="600" height="447" decoding="async">
         <span>Artisan's Finest</span>
       </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="products.html">Products/Recipes</a>
+        <a href="products.html">Products &amp; Recipes</a>
         <a href="events.html">Events</a>
         <a href="about.html" aria-current="page">About</a>
         <a href="contact.html">Request Info</a>
@@ -48,7 +49,7 @@
 
     <section class="section split">
       <figure class="story-photo">
-        <img src="images/chris-and-becky.jpg" alt="Chris and Becky, the makers behind Artisan's Finest, in their kitchen">
+        <img src="images/chris-and-becky.webp" alt="Chris and Becky, the makers behind Artisan's Finest, in their kitchen" width="900" height="720" decoding="async" loading="lazy">
         <figcaption>Chris &amp; Becky in the kitchen</figcaption>
       </figure>
       <div>
@@ -105,9 +106,24 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div><strong>Artisan's Finest</strong><br>Small-batch Virginia pantry goods</div>
-      <div><a href="contact.html">Request product information</a></div>
+      <div class="footer-col footer-brand">
+        <strong>Artisan's Finest</strong>
+        <p>Small-batch pantry goods &mdash; extracts, BBQ rubs, and seasoning blends handcrafted in Virginia's Shenandoah Valley.</p>
+      </div>
+      <nav class="footer-col footer-nav" aria-label="Footer">
+        <span class="footer-heading">Explore</span>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products &amp; Recipes</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="footer-col footer-cta">
+        <span class="footer-heading">Get in touch</span>
+        <p>Questions, custom gifts, or larger orders? We're glad to help.</p>
+        <a class="button secondary" href="contact.html">Request Info</a>
+      </div>
     </div>
+    <div class="footer-base">&copy; 2026 Artisan's Finest &middot; Shenandoah Valley, Virginia</div>
   </footer>
 </body>
 </html>

@@ -19,6 +19,7 @@
   <meta name="twitter:description" content="Browse Artisan's Finest by category: vanilla and extracts, sugar- and salt-free seasonings, signature BBQ rubs, heritage sausage blends, and gift sets.">
   <meta name="twitter:image" content="https://artisans-finest.github.io/artisans-finest/images/share-card.png">
   <link rel="icon" href="images/favicon.png">
+  <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,12 +27,12 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="Artisan's Finest logo">
+        <img src="images/logo.webp" alt="Artisan's Finest logo" width="600" height="447" decoding="async">
         <span>Artisan's Finest</span>
       </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="products.html" aria-current="page">Products/Recipes</a>
+        <a href="products.html" aria-current="page">Products &amp; Recipes</a>
         <a href="events.html">Events</a>
         <a href="about.html">About</a>
         <a href="contact.html">Request Info</a>
@@ -49,23 +50,23 @@
     <section class="section">
       <div class="tabs" role="tablist" aria-label="Product categories">
         <button class="tab" id="tab-vanilla" role="tab" aria-selected="false" aria-controls="panel-vanilla" tabindex="0">
-          <img src="images/bourbon-vanilla-hero.png" alt="">
+          <img src="images/bourbon-vanilla-hero.webp" alt="" width="760" height="950" decoding="async" loading="lazy">
           <span>Vanilla &amp; Extracts</span>
         </button>
         <button class="tab" id="tab-ssf" role="tab" aria-selected="false" aria-controls="panel-ssf" tabindex="-1">
-          <img src="images/sugar-salt-free-hero.png" alt="">
+          <img src="images/sugar-salt-free-hero.webp" alt="" width="760" height="507" decoding="async" loading="lazy">
           <span>Sugar &amp; Salt Free</span>
         </button>
         <button class="tab" id="tab-bbq" role="tab" aria-selected="false" aria-controls="panel-bbq" tabindex="-1">
-          <img src="images/bbq-rubs-hero.png" alt="">
+          <img src="images/bbq-rubs-hero.webp" alt="" width="760" height="507" decoding="async" loading="lazy">
           <span>Signature BBQ Rubs</span>
         </button>
         <button class="tab" id="tab-sausage" role="tab" aria-selected="false" aria-controls="panel-sausage" tabindex="-1">
-          <img src="images/heritage-sausage.png" alt="">
+          <img src="images/heritage-sausage.webp" alt="" width="760" height="380" decoding="async" loading="lazy">
           <span>Heritage Sausage Blends</span>
         </button>
         <button class="tab" id="tab-gifts" role="tab" aria-selected="false" aria-controls="panel-gifts" tabindex="-1">
-          <img src="images/gift-bundles-hero.png" alt="">
+          <img src="images/gift-bundles-hero.webp" alt="" width="760" height="507" decoding="async" loading="lazy">
           <span>Gift Sets &amp; Bundles</span>
         </button>
       </div>
@@ -639,14 +640,14 @@
         </div>
         <div class="product-grid">
           <article class="product-card">
-            <img src="images/smokehouse-bundle.png" alt="Smokehouse BBQ bundle">
+            <img src="images/smokehouse-bundle.webp" alt="Smokehouse BBQ bundle" width="320" height="256" decoding="async" loading="lazy">
             <div>
               <h3>Smokehouse Bundle</h3>
               <p>A grill-focused set for ribs, pork, chicken, burgers, vegetables, and cookout baskets.</p>
             </div>
           </article>
           <article class="product-card">
-            <img src="images/bbq-regions.png" alt="A selection of Artisan's Finest seasonings">
+            <img src="images/bbq-regions.webp" alt="A selection of Artisan's Finest seasonings" width="320" height="213" decoding="async" loading="lazy">
             <div>
               <h3>Build Your Own Gift Set</h3>
               <p>Mix vanillas, seasonings, and rubs into a custom basket. <a href="contact.html">Request a custom bundle</a> and we will put it together.</p>
@@ -661,7 +662,7 @@
     <section class="band">
       <div class="section split">
         <figure class="recipe-photo">
-          <img src="images/recipe-bank.png" alt="Artisan's Finest Recipe Bank">
+          <img src="images/recipe-bank.webp" alt="Artisan's Finest Recipe Bank" width="1100" height="733" decoding="async" loading="lazy">
         </figure>
         <div>
           <p class="eyebrow">Recipe Bank</p>
@@ -1417,9 +1418,24 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div><strong>Artisan's Finest</strong><br>Small-batch Virginia pantry goods</div>
-      <div><a href="contact.html">Request product information</a></div>
+      <div class="footer-col footer-brand">
+        <strong>Artisan's Finest</strong>
+        <p>Small-batch pantry goods &mdash; extracts, BBQ rubs, and seasoning blends handcrafted in Virginia's Shenandoah Valley.</p>
+      </div>
+      <nav class="footer-col footer-nav" aria-label="Footer">
+        <span class="footer-heading">Explore</span>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products &amp; Recipes</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="footer-col footer-cta">
+        <span class="footer-heading">Get in touch</span>
+        <p>Questions, custom gifts, or larger orders? We're glad to help.</p>
+        <a class="button secondary" href="contact.html">Request Info</a>
+      </div>
     </div>
+    <div class="footer-base">&copy; 2026 Artisan's Finest &middot; Shenandoah Valley, Virginia</div>
   </footer>
 
   <script>
@@ -1450,15 +1466,19 @@
         });
       });
 
-      // Enhance: once JS is available, collapse the panels so nothing is
-      // preselected on load. Without JS every panel stays visible, so the
-      // page is still fully usable. The first tab stays keyboard-focusable.
-      tabs.forEach(function (t, i) {
+      // Enhance: once JS is available, collapse the panels and open just one.
+      // Without JS every panel stays visible, so the page is still fully usable.
+      tabs.forEach(function (t) {
         t.setAttribute('aria-selected', 'false');
-        t.tabIndex = i === 0 ? 0 : -1;
+        t.tabIndex = -1;
         var panel = document.getElementById(t.getAttribute('aria-controls'));
         if (panel) panel.hidden = true;
       });
+
+      // Open the tab named in the URL hash (e.g. products.html#tab-bbq from the
+      // home page category cards), otherwise default to the first category.
+      var hashTab = location.hash && document.querySelector(location.hash + '[role="tab"]');
+      select(tabs.indexOf(hashTab) > -1 ? hashTab : tabs[0]);
 
       // Flavor description popups.
       var dialog = document.getElementById('flavor-dialog');
