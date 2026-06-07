@@ -48,7 +48,7 @@
 
     <section class="section">
       <div class="tabs" role="tablist" aria-label="Product categories">
-        <button class="tab" id="tab-vanilla" role="tab" aria-selected="true" aria-controls="panel-vanilla" tabindex="0">
+        <button class="tab" id="tab-vanilla" role="tab" aria-selected="false" aria-controls="panel-vanilla" tabindex="0">
           <img src="images/vanilla-extract.png" alt="">
           <span>Vanilla &amp; Extracts</span>
         </button>
@@ -986,9 +986,15 @@
         });
       });
 
-      // Enhance: collapse to the selected tab only once JS is available.
-      // Without JS every panel stays visible, so the page is still fully usable.
-      select(tabs[0]);
+      // Enhance: once JS is available, collapse the panels so nothing is
+      // preselected on load. Without JS every panel stays visible, so the
+      // page is still fully usable. The first tab stays keyboard-focusable.
+      tabs.forEach(function (t, i) {
+        t.setAttribute('aria-selected', 'false');
+        t.tabIndex = i === 0 ? 0 : -1;
+        var panel = document.getElementById(t.getAttribute('aria-controls'));
+        if (panel) panel.hidden = true;
+      });
 
       // Flavor description popups.
       var dialog = document.getElementById('flavor-dialog');
