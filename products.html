@@ -70,6 +70,8 @@
         </button>
       </div>
 
+      <p class="tab-prompt" id="tab-prompt" hidden>Select a category above to browse products.</p>
+
       <section id="panel-vanilla" class="tab-panel" role="tabpanel" aria-labelledby="tab-vanilla" tabindex="0">
         <div class="tab-panel-head">
           <h2>Vanilla &amp; Extracts</h2>
@@ -963,6 +965,8 @@
       var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
       if (!tabs.length) return;
 
+      var prompt = document.getElementById('tab-prompt');
+
       function select(tab, setFocus) {
         tabs.forEach(function (t) {
           var on = t === tab;
@@ -971,6 +975,7 @@
           var panel = document.getElementById(t.getAttribute('aria-controls'));
           if (panel) panel.hidden = !on;
         });
+        if (prompt) prompt.hidden = true;
         if (setFocus) tab.focus();
       }
 
@@ -995,6 +1000,7 @@
         var panel = document.getElementById(t.getAttribute('aria-controls'));
         if (panel) panel.hidden = true;
       });
+      if (prompt) prompt.hidden = false;
 
       // Flavor description popups.
       var dialog = document.getElementById('flavor-dialog');
