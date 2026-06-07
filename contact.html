@@ -19,6 +19,7 @@
   <meta name="twitter:description" content="Request product information, batch availability, or gift order details from Artisan's Finest.">
   <meta name="twitter:image" content="https://artisans-finest.github.io/artisans-finest/images/share-card.png">
   <link rel="icon" href="images/favicon.png">
+  <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,12 +27,12 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="Artisan's Finest logo">
+        <img src="images/logo.webp" alt="Artisan's Finest logo" width="600" height="447" decoding="async">
         <span>Artisan's Finest</span>
       </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="products.html">Products/Recipes</a>
+        <a href="products.html">Products &amp; Recipes</a>
         <a href="events.html">Events</a>
         <a href="about.html">About</a>
         <a href="contact.html" aria-current="page">Request Info</a>
@@ -62,10 +63,11 @@
 
         <label for="interest">I am interested in</label>
         <select id="interest" name="interest">
-          <option>Vanilla extract</option>
-          <option>Seasoning blends</option>
-          <option>BBQ rubs</option>
-          <option>Gift sets</option>
+          <option>Vanilla &amp; extracts</option>
+          <option>Sugar &amp; salt free seasonings</option>
+          <option>Signature BBQ rubs</option>
+          <option>Heritage sausage blends</option>
+          <option>Gift sets &amp; bundles</option>
           <option>Custom or larger order</option>
         </select>
 
@@ -79,9 +81,24 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div><strong>Artisan's Finest</strong><br>Small-batch Virginia pantry goods</div>
-      <div><a href="products.html">View products</a></div>
+      <div class="footer-col footer-brand">
+        <strong>Artisan's Finest</strong>
+        <p>Small-batch pantry goods &mdash; extracts, BBQ rubs, and seasoning blends handcrafted in Virginia's Shenandoah Valley.</p>
+      </div>
+      <nav class="footer-col footer-nav" aria-label="Footer">
+        <span class="footer-heading">Explore</span>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products &amp; Recipes</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="footer-col footer-cta">
+        <span class="footer-heading">Get in touch</span>
+        <p>Questions, custom gifts, or larger orders? We're glad to help.</p>
+        <a class="button secondary" href="contact.html">Request Info</a>
+      </div>
     </div>
+    <div class="footer-base">&copy; 2026 Artisan's Finest &middot; Shenandoah Valley, Virginia</div>
   </footer>
 </body>
 </html>
