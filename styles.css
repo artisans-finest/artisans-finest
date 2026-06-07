@@ -307,6 +307,18 @@ h3 {
   text-align: center;
 }
 
+.recipe-photo {
+  margin: 0;
+}
+
+.recipe-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
 .feature-list {
   display: grid;
   gap: 14px;
