@@ -662,6 +662,76 @@ h3 {
   font-size: 0.95rem;
 }
 
+.recipe-section-title {
+  margin: 18px 0 4px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--clay);
+}
+
+.dialog-body ul {
+  margin: 6px 0 0;
+  padding-left: 20px;
+}
+
+.dialog-body li {
+  margin: 3px 0;
+}
+
+.recipe-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.recipe-menu-toggle[aria-expanded="true"] {
+  background: var(--clay);
+  border-color: var(--clay);
+}
+
+.recipe-menu-toggle::after {
+  content: " \25BE";
+  font-size: 0.85em;
+}
+
+.recipe-menu-list {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 6;
+  min-width: 260px;
+  max-width: 90vw;
+  max-height: 340px;
+  overflow-y: auto;
+  display: grid;
+  gap: 2px;
+  padding: 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.recipe-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 12px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.recipe-item:hover,
+.recipe-item:focus-visible {
+  background: var(--cream);
+  outline: none;
+}
+
 .form-wrap {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);

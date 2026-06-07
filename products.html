@@ -668,8 +668,276 @@
           <h2>Real Ingredients. Endless Inspiration.</h2>
           <p class="lead">Put your Artisan's Finest seasonings and rubs to work. Explore our growing collection of recipes for homemade dressings, marinades, and barbecue sauces.</p>
           <div class="actions">
-            <!-- TODO: link buttons to recipe pages once recipes are ready -->
-            <a class="button" href="#">Salad Dressings</a>
+            <div class="recipe-menu">
+              <button type="button" class="button recipe-menu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="salad-dressing-menu">Salad Dressings</button>
+              <div class="recipe-menu-list" id="salad-dressing-menu" role="menu" hidden>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">All-Purpose House Vinaigrette</button>
+                  <template>
+                    <h3>All-Purpose House Vinaigrette</h3>
+                    <p class="dialog-tag">Featuring All-Purpose Seasoning</p>
+                    <p>Bright, balanced, and perfect for everyday salads.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup extra virgin olive oil</li>
+                      <li>3 tablespoons apple cider vinegar</li>
+                      <li>1 tablespoon Dijon mustard</li>
+                      <li>1 teaspoon honey (optional)</li>
+                      <li>2 teaspoons Artisan's Finest All-Purpose Seasoning</li>
+                      <li>Fresh cracked black pepper</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk all ingredients together or shake in a mason jar until combined. Let rest for 10 minutes before serving.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Garden salads, cucumber salads, tomato salads, and grilled chicken salads.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Citrus Herb Zest Dressing</button>
+                  <template>
+                    <h3>Citrus Herb Zest Dressing</h3>
+                    <p class="dialog-tag">Featuring Citrus Herb Seasoning</p>
+                    <p>Fresh, bright, and full of citrus flavor.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>&frac14; cup fresh lemon juice</li>
+                      <li>1 teaspoon lemon zest</li>
+                      <li>2 teaspoons Artisan's Finest Citrus Herb Seasoning</li>
+                      <li>1 teaspoon maple syrup (optional)</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk together until smooth. Allow flavors to blend for 10 minutes before serving.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Spring greens, arugula, seafood salads, and grilled salmon.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Garlic Herb Creamy Dressing</button>
+                  <template>
+                    <h3>Garlic Herb Creamy Dressing</h3>
+                    <p class="dialog-tag">Featuring Garlic Herb Seasoning</p>
+                    <p>A creamy dressing packed with savory herb flavor.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac34; cup plain Greek yogurt</li>
+                      <li>2 tablespoons olive oil</li>
+                      <li>2 tablespoons white wine vinegar</li>
+                      <li>2 teaspoons Artisan's Finest Garlic Herb Seasoning</li>
+                      <li>Water as needed for desired consistency</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Mix all ingredients until smooth. Add water a tablespoon at a time until desired thickness is reached.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Romaine lettuce, grilled vegetables, steak salads, and fresh vegetable trays.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Everything Bagel Crunch Dressing</button>
+                  <template>
+                    <h3>Everything Bagel Crunch Dressing</h3>
+                    <p class="dialog-tag">Featuring Everything Bagel Seasoning</p>
+                    <p>Toasty, nutty flavor with plenty of texture.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>3 tablespoons red wine vinegar</li>
+                      <li>1 teaspoon honey</li>
+                      <li>2 teaspoons Artisan's Finest Everything Bagel Seasoning</li>
+                      <li>1 teaspoon Dijon mustard</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk together until well combined.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Spinach salads, chopped vegetable salads, avocado salads, and sliced tomatoes.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Mediterranean Olive Dressing</button>
+                  <template>
+                    <h3>Mediterranean Olive Dressing</h3>
+                    <p class="dialog-tag">Featuring Mediterranean Seasoning</p>
+                    <p>A classic Mediterranean-inspired vinaigrette.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>&frac14; cup red wine vinegar</li>
+                      <li>1 clove garlic, minced</li>
+                      <li>2 teaspoons Artisan's Finest Mediterranean Seasoning</li>
+                      <li>Juice from &frac12; lemon</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Combine all ingredients and whisk thoroughly.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Greek salads, cucumber salads, grilled chicken, and lamb dishes.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Greek Lemon Dressing</button>
+                  <template>
+                    <h3>Greek Lemon Dressing</h3>
+                    <p class="dialog-tag">Featuring Greek Seasoning</p>
+                    <p>A bright and traditional Greek-style dressing.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>3 tablespoons fresh lemon juice</li>
+                      <li>1 tablespoon red wine vinegar</li>
+                      <li>2 teaspoons Artisan's Finest Greek Seasoning</li>
+                      <li>Fresh cracked black pepper</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk until fully blended.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Greek salads, grain bowls, chicken salads, and roasted potatoes.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Fajita Lime Dressing</button>
+                  <template>
+                    <h3>Fajita Lime Dressing</h3>
+                    <p class="dialog-tag">Featuring Fajita &amp; Taco Seasoning</p>
+                    <p>A zesty Southwestern favorite.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>&frac14; cup fresh lime juice</li>
+                      <li>1 tablespoon honey</li>
+                      <li>2 teaspoons Artisan's Finest Fajita &amp; Taco Seasoning</li>
+                      <li>1 tablespoon chopped cilantro (optional)</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk together until combined.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Taco salads, black bean salads, corn salads, and grilled shrimp.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Montreal Steakhouse Dressing</button>
+                  <template>
+                    <h3>Montreal Steakhouse Dressing</h3>
+                    <p class="dialog-tag">Featuring Montreal Steak Seasoning</p>
+                    <p>Bold steakhouse flavor with a peppery finish.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>3 tablespoons balsamic vinegar</li>
+                      <li>2 teaspoons Artisan's Finest Montreal Steak Seasoning</li>
+                      <li>1 teaspoon Dijon mustard</li>
+                      <li>1 teaspoon maple syrup (optional)</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk until smooth and well combined.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Steak salads, grilled mushrooms, wedge salads, and roasted vegetables.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Maryland Coastal Dressing</button>
+                  <template>
+                    <h3>Maryland Coastal Dressing</h3>
+                    <p class="dialog-tag">Featuring Maryland Seafood Seasoning</p>
+                    <p>A bright dressing perfect for seafood lovers.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>2 tablespoons lemon juice</li>
+                      <li>1 tablespoon apple cider vinegar</li>
+                      <li>2 teaspoons Artisan's Finest Maryland Seafood Seasoning</li>
+                      <li>1 tablespoon plain yogurt (optional)</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk until smooth.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Shrimp salads, crab salads, seafood pasta salads, and coleslaw.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Italian Garden Dressing</button>
+                  <template>
+                    <h3>Italian Garden Dressing</h3>
+                    <p class="dialog-tag">Featuring Italian Seasoning</p>
+                    <p>A classic herb-forward Italian vinaigrette.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>&frac14; cup red wine vinegar</li>
+                      <li>2 teaspoons Artisan's Finest Italian Seasoning</li>
+                      <li>1 teaspoon Dijon mustard</li>
+                      <li>1 teaspoon honey</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk until thoroughly combined.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Garden salads, pasta salads, antipasto salads, and grilled chicken.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Roasted Vegetable Dressing</button>
+                  <template>
+                    <h3>Roasted Vegetable Dressing</h3>
+                    <p class="dialog-tag">Featuring Roasted Vegetable Seasoning</p>
+                    <p>Rich, earthy flavor perfect for warm salads.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>2 tablespoons balsamic vinegar</li>
+                      <li>2 teaspoons Artisan's Finest Roasted Vegetable Seasoning</li>
+                      <li>1 teaspoon maple syrup</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk together and serve slightly warm if desired.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Roasted vegetables, grain bowls, warm spinach salads, and quinoa dishes.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Caribbean Jerk Island Dressing</button>
+                  <template>
+                    <h3>Caribbean Jerk Island Dressing</h3>
+                    <p class="dialog-tag">Featuring Caribbean Jerk Seasoning</p>
+                    <p>Sweet, citrusy, and lightly spicy.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>&frac14; cup orange juice</li>
+                      <li>2 tablespoons lime juice</li>
+                      <li>2 teaspoons Artisan's Finest Caribbean Jerk Seasoning</li>
+                      <li>1 teaspoon honey</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk until blended.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Mango salads, grilled chicken salads, shrimp, and tropical slaws.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Creole Bayou Dressing</button>
+                  <template>
+                    <h3>Creole Bayou Dressing</h3>
+                    <p class="dialog-tag">Featuring Creole Seasoning</p>
+                    <p>Southern-inspired flavor with a touch of heat.</p>
+                    <p class="recipe-section-title">Ingredients</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>3 tablespoons apple cider vinegar</li>
+                      <li>2 teaspoons Artisan's Finest Creole Seasoning</li>
+                      <li>1 teaspoon Dijon mustard</li>
+                      <li>Pinch of smoked paprika</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Whisk until smooth and well combined.</p>
+                    <p class="dialog-uses"><strong>Great On:</strong> Blackened chicken salads, tomato salads, grilled vegetables, and seafood dishes.</p>
+                  </template>
+                </div>
+                <div class="recipe-item-wrap">
+                  <button type="button" class="recipe-item" role="menuitem">Build Your Own &middot; Dressing Formula</button>
+                  <template>
+                    <h3>The Artisan's Finest Dressing Formula</h3>
+                    <p class="dialog-tag">Featuring any Sugar-Free &middot; Salt-Free Seasoning</p>
+                    <p>Create your own dressing using any of our Sugar-Free &middot; Salt-Free Seasonings.</p>
+                    <p class="recipe-section-title">Basic Vinaigrette</p>
+                    <ul>
+                      <li>&frac12; cup olive oil</li>
+                      <li>&frac14; cup vinegar or citrus juice</li>
+                      <li>2 teaspoons Artisan's Finest Seasoning</li>
+                      <li>Optional: 1 teaspoon honey, maple syrup, or Dijon mustard</li>
+                    </ul>
+                    <p class="recipe-section-title">Directions</p>
+                    <p>Combine all ingredients in a jar and shake well.</p>
+                  </template>
+                </div>
+              </div>
+            </div>
+            <!-- TODO: link Marinades and BBQ Sauces to their recipes once ready -->
             <a class="button" href="#">Marinades</a>
             <a class="button" href="#">BBQ Sauces</a>
           </div>
@@ -745,6 +1013,47 @@
           var tpl = trigger.parentNode.querySelector('template');
           if (!tpl) return;
           trigger.addEventListener('click', function () { openFlavor(trigger, tpl); });
+        });
+
+        // Recipe dropdown menus (e.g. Salad Dressings) reuse the same dialog.
+        var menus = Array.prototype.slice.call(document.querySelectorAll('.recipe-menu'));
+        function closeMenus(except) {
+          menus.forEach(function (menu) {
+            if (menu === except) return;
+            var t = menu.querySelector('.recipe-menu-toggle');
+            var list = menu.querySelector('.recipe-menu-list');
+            if (t) t.setAttribute('aria-expanded', 'false');
+            if (list) list.hidden = true;
+          });
+        }
+        menus.forEach(function (menu) {
+          var toggle = menu.querySelector('.recipe-menu-toggle');
+          var list = menu.querySelector('.recipe-menu-list');
+          if (!toggle || !list) return;
+          toggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var open = toggle.getAttribute('aria-expanded') === 'true';
+            closeMenus(menu);
+            toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+            list.hidden = open;
+          });
+          Array.prototype.forEach.call(list.querySelectorAll('.recipe-item'), function (item) {
+            var tpl = item.parentNode.querySelector('template');
+            if (!tpl) return;
+            item.addEventListener('click', function () {
+              toggle.setAttribute('aria-expanded', 'false');
+              list.hidden = true;
+              // Restore focus to the toggle (not the hidden menu item) on close.
+              openFlavor(toggle, tpl);
+            });
+          });
+        });
+        // Close any open menu when clicking outside it or pressing Escape.
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest('.recipe-menu')) closeMenus(null);
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeMenus(null);
         });
 
         dialog.querySelector('.dialog-close').addEventListener('click', closeFlavor);
