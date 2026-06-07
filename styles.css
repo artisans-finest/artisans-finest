@@ -358,37 +358,51 @@ h3 {
 }
 
 .tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  border-bottom: 2px solid var(--line);
-  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 32px;
 }
 
 .tab {
   appearance: none;
-  border: 1px solid transparent;
-  border-bottom: none;
-  background: transparent;
-  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
   font: inherit;
   font-weight: 800;
-  padding: 12px 18px;
-  border-radius: 8px 8px 0 0;
+  text-align: center;
   cursor: pointer;
-  margin-bottom: -2px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.tab img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #efe3d0;
+}
+
+.tab span {
+  display: block;
+  line-height: 1.25;
 }
 
 .tab:hover {
-  color: var(--ink);
-  background: var(--cream);
+  border-color: var(--clay);
+  box-shadow: 0 10px 22px rgba(45, 34, 24, 0.1);
+  transform: translateY(-2px);
 }
 
 .tab[aria-selected="true"] {
-  color: var(--ink);
-  background: var(--white);
-  border-color: var(--line);
-  border-bottom: 2px solid var(--white);
+  border-color: var(--clay);
+  box-shadow: 0 0 0 2px var(--clay), 0 10px 22px rgba(45, 34, 24, 0.12);
 }
 
 .tab:focus-visible {
