@@ -699,6 +699,7 @@ h3 {
 .recipe-menu-toggle[aria-expanded="true"] {
   background: var(--clay);
   border-color: var(--clay);
+  color: var(--white);
 }
 
 .recipe-menu-toggle::after {
