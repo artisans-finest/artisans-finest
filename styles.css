@@ -285,6 +285,27 @@ h3 {
   background: transparent;
 }
 
+.story-photo {
+  margin: 0;
+}
+
+.story-photo img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.story-photo figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-style: italic;
+  text-align: center;
+}
+
 .feature-list {
   display: grid;
   gap: 14px;
