@@ -473,6 +473,128 @@ h3 {
   margin-bottom: 0;
 }
 
+.flavor.is-clickable {
+  padding: 0;
+  transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.flavor.is-clickable:hover {
+  border-left-color: var(--clay);
+  box-shadow: 0 10px 22px rgba(45, 34, 24, 0.1);
+  transform: translateY(-2px);
+}
+
+.flavor-trigger {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  padding: 16px 18px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.flavor-trigger h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.flavor-trigger:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.flavor-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--clay);
+}
+
+.flavor-more::after {
+  content: " \2192";
+}
+
+.flavor-dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100vh - 80px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 30px 60px rgba(45, 34, 24, 0.28);
+  overflow: hidden;
+}
+
+.flavor-dialog::backdrop {
+  background: rgba(45, 34, 24, 0.5);
+}
+
+.dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.dialog-close:hover {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.dialog-close:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.dialog-body {
+  padding: 30px 28px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+}
+
+.dialog-body h3 {
+  margin: 0 36px 0 0;
+  font-size: 1.5rem;
+}
+
+.dialog-body p {
+  margin: 14px 0 0;
+}
+
+.dialog-tag {
+  color: var(--clay);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.dialog-uses,
+.dialog-notes {
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--sage);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .form-wrap {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
