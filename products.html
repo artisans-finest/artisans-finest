@@ -1417,8 +1417,21 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div><strong>Artisan's Finest</strong><br>Small-batch Virginia pantry goods</div>
-      <div><a href="contact.html">Request product information</a></div>
+      <div class="footer-brand">
+        <strong>Artisan's Finest</strong>
+        <p>Small-batch Virginia pantry goods &mdash; extracts, seasoning blends, and BBQ rubs made with care.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products/Recipes</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Request Info</a>
+      </nav>
+    </div>
+    <div class="footer-base">
+      <span>&copy; 2026 Artisan's Finest</span>
+      <a href="contact.html">Request product information</a>
     </div>
   </footer>
 
@@ -1468,6 +1481,27 @@
           body.appendChild(tpl.content.cloneNode(true));
           var heading = body.querySelector('h3');
           if (heading) heading.id = 'flavor-dialog-title';
+          // For product flavors (not recipe popups) add a request CTA so the
+          // dialog becomes a path to ordering instead of a dead end. The link
+          // pre-fills the contact form with the item and its category.
+          if (trigger.classList.contains('flavor-trigger')) {
+            var catMap = {
+              'panel-vanilla': 'Vanilla extract',
+              'panel-ssf': 'Seasoning blends',
+              'panel-bbq': 'BBQ rubs',
+              'panel-sausage': 'Seasoning blends'
+            };
+            var panel = trigger.closest('.tab-panel');
+            var item = heading ? heading.textContent : '';
+            var href = 'contact.html?item=' + encodeURIComponent(item);
+            var interest = panel ? catMap[panel.id] : '';
+            if (interest) href += '&interest=' + encodeURIComponent(interest);
+            var cta = document.createElement('a');
+            cta.className = 'button dialog-cta';
+            cta.href = href;
+            cta.textContent = 'Ask about availability';
+            body.appendChild(cta);
+          }
           dialog.showModal();
         }
 

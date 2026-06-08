@@ -650,6 +650,10 @@ h3 {
   font-style: italic;
 }
 
+.dialog-cta {
+  margin-top: 24px;
+}
+
 .dialog-uses,
 .dialog-notes {
   margin-top: 16px;
@@ -792,15 +796,60 @@ textarea {
 .footer-inner {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 36px 0 24px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 18px;
+  gap: 28px;
   color: rgba(255, 255, 255, 0.78);
 }
 
-.footer-inner strong {
+.footer-brand {
+  max-width: 420px;
+}
+
+.footer-brand strong {
   color: var(--white);
+}
+
+.footer-brand p {
+  margin: 8px 0 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 6px 18px;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer-base {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 16px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 18px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-base a {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .event-month-group {
