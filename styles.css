@@ -675,6 +675,16 @@ h3 {
   font-style: italic;
 }
 
+.dialog-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 18px 0 0;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+
 .dialog-cta {
   margin-top: 24px;
 }
