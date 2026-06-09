@@ -102,6 +102,88 @@
       </div>
       <img src="images/global-grill.png" alt="Global Grill seasoning blend" width="320" height="256" loading="lazy" decoding="async">
     </section>
+
+    <section class="band testimonials" aria-labelledby="testimonials-title">
+      <div class="section">
+        <div class="section-head">
+          <p class="eyebrow">From our table to yours</p>
+          <h2 id="testimonials-title">What People Are Saying</h2>
+          <p>Notes from cooks, grillers, and gift-givers across the Shenandoah Valley and beyond.</p>
+        </div>
+        <div class="carousel" aria-roledescription="carousel" aria-label="Customer testimonials">
+          <div class="carousel-viewport">
+            <ul class="carousel-track">
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="1 of 11">
+                <figure>
+                  <blockquote>The Bourbon Vanilla completely changed my baking. The flavor is rich, smooth, and far superior to anything I&rsquo;ve found in the grocery store.</blockquote>
+                  <figcaption><span class="testimonial-name">Sarah M.</span><span class="testimonial-loc">Winchester, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="2 of 11">
+                <figure>
+                  <blockquote>I bought the Garlic Herb and Citrus Herb seasonings at a festival and went back the next day for more. The fact that they&rsquo;re sugar-free and salt-free makes them even better.</blockquote>
+                  <figcaption><span class="testimonial-name">Mike T.</span><span class="testimonial-loc">Front Royal, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="3 of 11">
+                <figure>
+                  <blockquote>The Coffee Ancho Rub on smoked brisket was outstanding. Deep flavor, perfect balance, and a beautiful bark.</blockquote>
+                  <figcaption><span class="testimonial-name">James R.</span><span class="testimonial-loc">Harrisonburg, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="4 of 11">
+                <figure>
+                  <blockquote>Artisan&rsquo;s Finest is one of the few vendors where I never leave with just one item. The quality is consistent across every seasoning and extract.</blockquote>
+                  <figcaption><span class="testimonial-name">Emily W.</span><span class="testimonial-loc">Luray, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="5 of 11">
+                <figure>
+                  <blockquote>The Pure Vanilla Extract is worth every penny. You can smell the difference the moment you open the bottle.</blockquote>
+                  <figcaption><span class="testimonial-name">Karen B.</span><span class="testimonial-loc">Strasburg, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="6 of 11">
+                <figure>
+                  <blockquote>I appreciate that the seasonings contain no fillers or anti-caking agents. You can actually see and taste the ingredients.</blockquote>
+                  <figcaption><span class="testimonial-name">David L.</span><span class="testimonial-loc">Stanley, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="7 of 11">
+                <figure>
+                  <blockquote>The Honey Dijon Rub made the best grilled chicken we&rsquo;ve had all summer. Even our picky eaters asked for seconds.</blockquote>
+                  <figcaption><span class="testimonial-name">Rebecca H.</span><span class="testimonial-loc">Middletown, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="8 of 11">
+                <figure>
+                  <blockquote>The Everything Bagel seasoning has become a staple in our kitchen. Eggs, avocado toast, vegetables&mdash;it goes on everything.</blockquote>
+                  <figcaption><span class="testimonial-name">Amanda P.</span><span class="testimonial-loc">Woodstock, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="9 of 11">
+                <figure>
+                  <blockquote>The Kansas City and Carolina rubs helped me place in our neighborhood BBQ competition. That&rsquo;s all the endorsement I need.</blockquote>
+                  <figcaption><span class="testimonial-name">Chris G.</span><span class="testimonial-loc">Elkton, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="10 of 11">
+                <figure>
+                  <blockquote>You can tell these products were created by people who actually cook. Every blend has a purpose and a personality.</blockquote>
+                  <figcaption><span class="testimonial-name">Jennifer S.</span><span class="testimonial-loc">Winchester, VA</span></figcaption>
+                </figure>
+              </li>
+              <li class="testimonial" role="group" aria-roledescription="slide" aria-label="11 of 11">
+                <figure>
+                  <blockquote>Every rub we&rsquo;ve tried has delivered exactly what the label promised. From the bold Smokehouse blend to the rich Coffee Ancho, Artisan&rsquo;s Finest has become our go-to for grilling season.</blockquote>
+                  <figcaption><span class="testimonial-name">Mark &amp; Lisa D.</span><span class="testimonial-loc">Colonial Beach, VA</span></figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -129,5 +211,102 @@
       <a href="contact.html">Request product information</a>
     </div>
   </footer>
+
+  <script>
+    // Testimonial carousel. Without JS the track is a horizontally
+    // scrollable, snap-aligned list of quotes, so every testimonial stays
+    // reachable. With JS we enhance it into a one-at-a-time carousel with
+    // previous/next buttons, dot indicators, keyboard support, and gentle
+    // autoplay that pauses on hover/focus and respects reduced-motion.
+    (function () {
+      var carousel = document.querySelector('.testimonials .carousel');
+      if (!carousel) return;
+      var track = carousel.querySelector('.carousel-track');
+      var slides = Array.prototype.slice.call(track.children);
+      if (slides.length < 2) return;
+
+      carousel.classList.add('is-enhanced');
+
+      var index = 0;
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      var controls = document.createElement('div');
+      controls.className = 'carousel-controls';
+
+      var prev = document.createElement('button');
+      prev.type = 'button';
+      prev.className = 'carousel-btn carousel-prev';
+      prev.setAttribute('aria-label', 'Previous testimonial');
+      prev.innerHTML = '←';
+
+      var next = document.createElement('button');
+      next.type = 'button';
+      next.className = 'carousel-btn carousel-next';
+      next.setAttribute('aria-label', 'Next testimonial');
+      next.innerHTML = '→';
+
+      var dots = document.createElement('div');
+      dots.className = 'carousel-dots';
+
+      var dotButtons = slides.map(function (slide, i) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'carousel-dot';
+        dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+        dot.addEventListener('click', function () { goTo(i); stop(); });
+        dots.appendChild(dot);
+        return dot;
+      });
+
+      controls.appendChild(prev);
+      controls.appendChild(dots);
+      controls.appendChild(next);
+      carousel.appendChild(controls);
+
+      function update() {
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        slides.forEach(function (s, i) {
+          s.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+        });
+        dotButtons.forEach(function (d, i) {
+          d.setAttribute('aria-current', i === index ? 'true' : 'false');
+        });
+      }
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        update();
+      }
+
+      prev.addEventListener('click', function () { goTo(index - 1); stop(); });
+      next.addEventListener('click', function () { goTo(index + 1); stop(); });
+
+      carousel.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { goTo(index - 1); stop(); }
+        else if (e.key === 'ArrowRight') { goTo(index + 1); stop(); }
+      });
+
+      var timer = null;
+      function start() {
+        if (reduceMotion) return;
+        stop();
+        timer = window.setInterval(function () { goTo(index + 1); }, 6000);
+      }
+      function stop() {
+        if (timer) { window.clearInterval(timer); timer = null; }
+      }
+
+      carousel.addEventListener('mouseenter', stop);
+      carousel.addEventListener('mouseleave', start);
+      carousel.addEventListener('focusin', stop);
+      carousel.addEventListener('focusout', start);
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) stop(); else start();
+      });
+
+      update();
+      start();
+    })();
+  </script>
 </body>
 </html>

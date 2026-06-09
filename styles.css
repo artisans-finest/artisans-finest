@@ -1018,6 +1018,169 @@ textarea {
   vertical-align: middle;
 }
 
+/* Testimonial carousel */
+.testimonials .carousel {
+  position: relative;
+  margin-top: 8px;
+}
+
+.carousel-viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 8px 0;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+.testimonial figure {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 36px 34px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--gold);
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(45, 34, 24, 0.07);
+  min-height: 248px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial blockquote {
+  position: relative;
+  margin: 0;
+  padding-top: 26px;
+  font-family: 'Fraunces', Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.1vw, 1.5rem);
+  line-height: 1.4;
+}
+
+.testimonial blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: -18px;
+  left: -4px;
+  font-family: 'Fraunces', Georgia, "Times New Roman", serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.testimonial figcaption {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-name {
+  font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+}
+
+.testimonial-loc {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Enhanced (JS) mode: drive slides by transform instead of native scroll. */
+.carousel.is-enhanced .carousel-viewport {
+  overflow: hidden;
+  scroll-snap-type: none;
+}
+
+.carousel.is-enhanced .carousel-track {
+  flex-wrap: nowrap;
+  transition: transform 0.45s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel.is-enhanced .carousel-track {
+    transition: none;
+  }
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.carousel-btn {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.carousel-btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.carousel-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.carousel-dot[aria-current="true"] {
+  background: var(--clay);
+  border-color: var(--clay);
+}
+
+.carousel-dot:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
 @media (max-width: 860px) {
   .nav {
     min-height: 92px;
