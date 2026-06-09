@@ -723,7 +723,8 @@ h3 {
   color: var(--clay);
 }
 
-.dialog-body ul {
+.dialog-body ul,
+.dialog-body ol {
   margin: 6px 0 0;
   padding-left: 20px;
 }
