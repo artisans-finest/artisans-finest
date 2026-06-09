@@ -883,6 +883,30 @@ textarea {
   text-decoration: underline;
 }
 
+.footer-connect {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  gap: 6px;
+}
+
+.footer-connect strong {
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.footer-connect a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-connect a:hover,
+.footer-connect a:focus-visible {
+  color: var(--white);
+  text-decoration: underline;
+}
+
 .footer-base {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
