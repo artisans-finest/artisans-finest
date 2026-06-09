@@ -1039,6 +1039,11 @@ textarea {
     aspect-ratio: 4 / 3;
   }
 
+  .dialog-img {
+    width: 50%;
+    min-width: 180px;
+  }
+
   .footer-inner {
     flex-direction: column;
   }
