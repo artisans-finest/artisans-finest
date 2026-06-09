@@ -675,6 +675,19 @@ h3 {
   font-style: italic;
 }
 
+.dialog-price {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.dialog-price .dialog-vol {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
 .dialog-img {
   display: block;
   width: 31.25%;
