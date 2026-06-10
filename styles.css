@@ -836,6 +836,16 @@ textarea {
   resize: vertical;
 }
 
+/* Honeypot: visually and from assistive tech removed, but still in the DOM
+   for bots to trip over. Not display:none so field-skipping bots still see it. */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .site-footer {
   margin-top: 36px;
   background: var(--ink);
@@ -845,16 +855,26 @@ textarea {
 .footer-inner {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 36px 0 24px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 28px;
+  padding: 48px 0 28px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 40px;
   color: rgba(255, 255, 255, 0.78);
 }
 
 .footer-brand {
   max-width: 420px;
+}
+
+.footer-col strong,
+.footer-connect strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .footer-brand strong {
@@ -867,12 +887,13 @@ textarea {
 
 .footer-nav {
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 6px 18px;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .footer-nav a {
+  display: inline-block;
+  padding: 5px 0;
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-weight: 700;
@@ -887,16 +908,12 @@ textarea {
 .footer-connect {
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
-  gap: 6px;
-}
-
-.footer-connect strong {
-  color: var(--white);
-  margin-bottom: 2px;
+  gap: 2px;
 }
 
 .footer-connect a {
+  display: inline-block;
+  padding: 5px 0;
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-weight: 700;
@@ -1214,6 +1231,11 @@ textarea {
   .product-grid {
     grid-template-columns: 1fr;
   }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1245,7 +1267,8 @@ textarea {
     min-width: 180px;
   }
 
-  .footer-inner {
-    flex-direction: column;
+  .footer-nav a,
+  .footer-connect a {
+    padding: 9px 0;
   }
 }

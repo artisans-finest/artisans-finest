@@ -56,6 +56,17 @@
       </aside>
 
       <form action="https://formspree.io/f/mpqewgbw" method="POST">
+        <!-- After a successful submit, Formspree redirects here instead of its
+             own generic page, so the visitor lands back on the branded site. -->
+        <input type="hidden" name="_next" value="https://artisans-finest.github.io/artisans-finest/thank-you.html">
+        <input type="hidden" name="_subject" value="New request from the Artisan's Finest website">
+        <!-- Spam honeypot: hidden from people, but bots tend to fill it in.
+             When it is non-empty Formspree silently discards the submission. -->
+        <p class="hp" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+        </p>
+
         <label for="name">Name</label>
         <input id="name" name="name" type="text" autocomplete="name" required>
 
@@ -109,14 +120,17 @@
         <strong>Artisan's Finest</strong>
         <p>Small-batch Virginia pantry goods &mdash; extracts, seasoning blends, and BBQ rubs made with care.</p>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="recipes.html">Recipes</a>
-        <a href="events.html">Events</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Request Info</a>
-      </nav>
+      <div class="footer-col">
+        <strong>Explore</strong>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="events.html">Events</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Request Info</a>
+        </nav>
+      </div>
       <div class="footer-connect">
         <strong>Connect</strong>
         <a href="mailto:TheArtisansFinest@gmail.com">TheArtisansFinest@gmail.com</a>
