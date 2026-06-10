@@ -870,30 +870,22 @@ textarea {
 .footer-inner {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 48px 0 28px;
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 40px;
+  padding: 48px 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
   color: rgba(255, 255, 255, 0.78);
 }
 
 .footer-brand {
-  max-width: 420px;
-}
-
-.footer-col strong,
-.footer-connect strong {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--white);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  max-width: 520px;
 }
 
 .footer-brand strong {
   color: var(--white);
+  font-size: 1.05rem;
 }
 
 .footer-brand p {
@@ -902,8 +894,9 @@ textarea {
 
 .footer-nav {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 28px;
 }
 
 .footer-nav a {
@@ -922,8 +915,9 @@ textarea {
 
 .footer-connect {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 28px;
 }
 
 .footer-connect a {
@@ -947,8 +941,8 @@ textarea {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px 18px;
+  justify-content: center;
+  gap: 10px 24px;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -1245,11 +1239,6 @@ textarea {
   .maker-grid,
   .product-grid {
     grid-template-columns: 1fr;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 28px;
   }
 }
 
