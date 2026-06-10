@@ -61,10 +61,12 @@
         <input type="hidden" name="_next" value="https://artisans-finest.github.io/artisans-finest/thank-you.html">
         <input type="hidden" name="_subject" value="New request from the Artisan's Finest website">
         <!-- Spam honeypot: hidden from people, but bots tend to fill it in.
-             When it is non-empty Formspree silently discards the submission. -->
+             When it is non-empty Formspree silently discards the submission.
+             Deliberately NOT named/labelled like a real field (e.g. "Company")
+             so browser autofill never populates it for genuine visitors. -->
         <p class="hp" aria-hidden="true">
-          <label for="company">Company</label>
-          <input id="company" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          <label for="hp-leave-blank">Leave this field blank</label>
+          <input id="hp-leave-blank" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
         </p>
 
         <label for="name">Name</label>
@@ -86,6 +88,7 @@
         <textarea id="message" name="message" placeholder="Tell us what you are looking for, quantity, timing, and any gift details." required></textarea>
 
         <button class="button" type="submit">Send Request</button>
+        <p id="form-status" class="form-status" role="alert" hidden></p>
       </form>
     </section>
   </main>
@@ -111,6 +114,46 @@
           msg.value = 'I would like to ask about: ' + item + '.\n\n';
         }
       }
+    })();
+
+    // Submit the form to Formspree via fetch so we control the outcome:
+    // a single click reliably sends, then we redirect to our own branded
+    // thank-you page. Without JS the form still POSTs natively (the action +
+    // _next attributes), so submission never depends on this script.
+    (function () {
+      var form = document.querySelector('.form-wrap form');
+      if (!form || typeof window.fetch !== 'function' || typeof FormData !== 'function') return;
+
+      var THANKS = 'thank-you.html';
+      var status = document.getElementById('form-status');
+      var button = form.querySelector('[type="submit"]');
+
+      form.addEventListener('submit', function (e) {
+        // Let the browser run native required/email validation first.
+        if (typeof form.checkValidity === 'function' && !form.checkValidity()) return;
+
+        e.preventDefault();
+        if (status) { status.hidden = true; status.textContent = ''; }
+        if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            window.location.assign(THANKS);
+            return;
+          }
+          throw new Error('Request failed');
+        }).catch(function () {
+          if (button) { button.disabled = false; button.textContent = 'Send Request'; }
+          if (status) {
+            status.hidden = false;
+            status.textContent = 'Sorry — your request could not be sent. Please email TheArtisansFinest@gmail.com or try again in a moment.';
+          }
+        });
+      });
     })();
   </script>
 

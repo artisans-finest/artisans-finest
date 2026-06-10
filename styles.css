@@ -846,6 +846,21 @@ textarea {
   overflow: hidden;
 }
 
+.form-status {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--clay);
+  border-left: 4px solid var(--clay);
+  border-radius: 8px;
+  background: rgba(167, 95, 59, 0.08);
+  color: var(--clay);
+  font-weight: 700;
+}
+
+.form-status[hidden] {
+  display: none;
+}
+
 .site-footer {
   margin-top: 36px;
   background: var(--ink);
