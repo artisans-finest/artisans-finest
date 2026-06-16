@@ -1123,7 +1123,15 @@
               actions.className = 'dialog-actions';
               sausageImg.parentNode.removeChild(sausageImg);
               actions.appendChild(sausageImg);
-              actions.appendChild(cta);
+              // Stack a small "Fall 2026" launch banner over the CTA button.
+              var ctaGroup = document.createElement('div');
+              ctaGroup.className = 'dialog-cta-group';
+              var banner = document.createElement('span');
+              banner.className = 'fall-banner';
+              banner.textContent = 'Fall 2026';
+              ctaGroup.appendChild(banner);
+              ctaGroup.appendChild(cta);
+              actions.appendChild(ctaGroup);
               body.appendChild(actions);
             } else {
               body.appendChild(cta);
