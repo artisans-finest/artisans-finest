@@ -1164,16 +1164,37 @@
         });
       }
 
-      // On return navigation (including back/forward-cache restore) the last
-      // category tabs can come back blank because they wrap below the fold and
-      // never painted on the original visit. pageshow fires on both fresh loads
-      // and bfcache restores, so force any tab image that didn't load to reload.
-      window.addEventListener('pageshow', function () {
-        Array.prototype.forEach.call(document.querySelectorAll('.tabs img'), function (img) {
-          if (!img.complete || img.naturalWidth === 0) {
-            var src = img.src;
-            img.removeAttribute('src');
-            img.src = src;
+      // Some category tab images (notably the lower-row Sausage and Gift tabs)
+      // can come back blank when the products page is revisited: a back/forward
+      // cache restore may not repaint them, or a normal navigation may reuse a
+      // stale/empty cached response. Hard refresh always fixes it. The helpers
+      // below cover all three cases.
+      var tabImgs = Array.prototype.slice.call(document.querySelectorAll('.tabs img'));
+
+      function reloadImg(img, bustCache) {
+        var base = img.src.split('?')[0].split('#')[0];
+        img.removeAttribute('src');
+        // A timestamp query forces a fresh fetch past any bad cached response.
+        img.src = bustCache ? base + '?r=' + Date.now() : base;
+      }
+
+      // If a tab image fails to load (e.g. a stale/empty cache entry), retry it
+      // once with a cache-busting URL so it does not stay blank until a refresh.
+      tabImgs.forEach(function (img) {
+        img.addEventListener('error', function () {
+          if (img.getAttribute('data-retried')) return;
+          img.setAttribute('data-retried', '1');
+          reloadImg(img, true);
+        });
+      });
+
+      // pageshow fires on fresh loads and on back/forward-cache restores. On a
+      // bfcache restore (persisted) force every tab image to repaint; otherwise
+      // only nudge ones that did not finish loading.
+      window.addEventListener('pageshow', function (e) {
+        tabImgs.forEach(function (img) {
+          if (e.persisted || !img.complete || img.naturalWidth === 0) {
+            reloadImg(img, false);
           }
         });
       });
