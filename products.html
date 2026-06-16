@@ -1161,6 +1161,20 @@
           if (lastTrigger) { lastTrigger.focus(); lastTrigger = null; }
         });
       }
+
+      // On return navigation (including back/forward-cache restore) the last
+      // category tabs can come back blank because they wrap below the fold and
+      // never painted on the original visit. pageshow fires on both fresh loads
+      // and bfcache restores, so force any tab image that didn't load to reload.
+      window.addEventListener('pageshow', function () {
+        Array.prototype.forEach.call(document.querySelectorAll('.tabs img'), function (img) {
+          if (!img.complete || img.naturalWidth === 0) {
+            var src = img.src;
+            img.removeAttribute('src');
+            img.src = src;
+          }
+        });
+      });
     })();
   </script>
 </body>
