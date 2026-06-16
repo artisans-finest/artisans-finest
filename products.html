@@ -50,26 +50,26 @@
     <section class="section">
       <div class="tabs" role="tablist" aria-label="Product categories">
         <button class="tab" id="tab-vanilla" role="tab" aria-selected="false" aria-controls="panel-vanilla" tabindex="0">
-          <img src="images/extracts-hero.webp" alt="" width="1536" height="1024" loading="eager" decoding="async">
+          <img src="images/extracts-hero.webp" alt="" width="1536" height="1024" loading="eager" decoding="sync">
           <span>Artisan's Finest Vanilla Extracts</span>
         </button>
         <button class="tab" id="tab-ssf" role="tab" aria-selected="false" aria-controls="panel-ssf" tabindex="-1">
-          <img src="images/sugar-salt-free-hero.webp" alt="" width="1536" height="1024" loading="eager" decoding="async">
+          <img src="images/sugar-salt-free-hero.webp" alt="" width="1536" height="1024" loading="eager" decoding="sync">
           <span>Sugar and Salt Free Seasonings</span>
         </button>
         <button class="tab" id="tab-bbq" role="tab" aria-selected="false" aria-controls="panel-bbq" tabindex="-1">
-          <img src="images/bbq-rubs-hero.webp" alt="" width="1536" height="1024" loading="eager" decoding="async">
+          <img src="images/bbq-rubs-hero.webp" alt="" width="1536" height="1024" loading="eager" decoding="sync">
           <span>Signature BBQ Rubs</span>
         </button>
         <button class="tab" id="tab-sausage" role="tab" aria-selected="false" aria-controls="panel-sausage" tabindex="-1">
           <span class="tab-media">
-            <img src="images/heritage-sausage-hero-v2.webp" alt="" width="1536" height="1024" loading="eager" decoding="async">
+            <img src="images/heritage-sausage-hero-v2.webp" alt="" width="1536" height="1024" loading="eager" decoding="sync">
             <span class="tab-banner">Available Fall 2026</span>
           </span>
           <span>Heritage Sausage Blends</span>
         </button>
         <button class="tab" id="tab-gifts" role="tab" aria-selected="false" aria-controls="panel-gifts" tabindex="-1">
-          <img src="images/gift-bundles-hero-v2.webp" alt="" width="1535" height="1024" loading="eager" decoding="async">
+          <img src="images/gift-bundles-hero-v2.webp" alt="" width="1535" height="1024" loading="eager" decoding="sync">
           <span>Gift Sets &amp; Bundles</span>
         </button>
       </div>
@@ -1164,39 +1164,26 @@
         });
       }
 
-      // Some category tab images (notably the lower-row Sausage and Gift tabs)
-      // can come back blank when the products page is revisited: a back/forward
-      // cache restore may not repaint them, or a normal navigation may reuse a
-      // stale/empty cached response. Hard refresh always fixes it. The helpers
-      // below cover all three cases.
+      // The lower-row Sausage and Gift tab images download and cache fine, but
+      // on a normal revisit they can stay decoded-but-unpainted, so only the
+      // img background colour shows. Toggling display forces a synchronous
+      // reflow/repaint (what a hard refresh does), making them actually render.
       var tabImgs = Array.prototype.slice.call(document.querySelectorAll('.tabs img'));
 
-      function reloadImg(img, bustCache) {
-        var base = img.src.split('?')[0].split('#')[0];
-        img.removeAttribute('src');
-        // A timestamp query forces a fresh fetch past any bad cached response.
-        img.src = bustCache ? base + '?r=' + Date.now() : base;
+      function repaint(img) {
+        img.style.display = 'none';
+        void img.offsetWidth; // force reflow
+        img.style.display = '';
       }
 
-      // If a tab image fails to load (e.g. a stale/empty cache entry), retry it
-      // once with a cache-busting URL so it does not stay blank until a refresh.
       tabImgs.forEach(function (img) {
-        img.addEventListener('error', function () {
-          if (img.getAttribute('data-retried')) return;
-          img.setAttribute('data-retried', '1');
-          reloadImg(img, true);
-        });
+        if (img.complete) repaint(img);
+        else img.addEventListener('load', function () { repaint(img); }, { once: true });
       });
 
-      // pageshow fires on fresh loads and on back/forward-cache restores. On a
-      // bfcache restore (persisted) force every tab image to repaint; otherwise
-      // only nudge ones that did not finish loading.
-      window.addEventListener('pageshow', function (e) {
-        tabImgs.forEach(function (img) {
-          if (e.persisted || !img.complete || img.naturalWidth === 0) {
-            reloadImg(img, false);
-          }
-        });
+      // Re-run on fresh loads and back/forward-cache restores.
+      window.addEventListener('pageshow', function () {
+        tabImgs.forEach(repaint);
       });
     })();
   </script>
