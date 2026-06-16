@@ -478,10 +478,18 @@ h3 {
   transform: translateY(-2px);
 }
 
-/* "Available Fall 2026" strip flush across the bottom of the tab button. */
+/* "Available Fall 2026" badge overlaid across the bottom of the tab image. */
+.tab-media {
+  position: relative;
+  display: block;
+}
+
 .tab-banner {
-  margin: 0 -12px -12px;
-  padding: 6px 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px 10px;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -489,7 +497,7 @@ h3 {
   text-align: center;
   color: var(--white);
   background: var(--clay);
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 8px 8px;
 }
 
 .tab[aria-selected="true"] {
