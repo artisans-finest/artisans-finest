@@ -706,6 +706,7 @@ h3 {
 .dialog-actions {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
   margin-top: 24px;
@@ -717,8 +718,8 @@ h3 {
 
 .sausage-img {
   flex: 0 0 auto;
-  width: 150px;
-  max-width: 40%;
+  width: 210px;
+  max-width: 58%;
   height: auto;
   border-radius: 8px;
   border: 1px solid var(--line);
