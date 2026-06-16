@@ -702,6 +702,29 @@ h3 {
   margin-top: 24px;
 }
 
+/* Sausage blends pair a small product image with the availability button. */
+.dialog-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.dialog-actions .dialog-cta {
+  margin-top: 0;
+}
+
+.sausage-img {
+  flex: 0 0 auto;
+  width: 150px;
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+
 .dialog-uses,
 .dialog-notes {
   margin-top: 16px;
