@@ -566,7 +566,7 @@ h3 {
 
 .badge.soon {
   background: rgba(201, 147, 62, 0.16);
-  color: #97681c;
+  color: #7d5512;
   border-color: rgba(201, 147, 62, 0.38);
 }
 
@@ -1318,7 +1318,7 @@ textarea {
   }
 
   .nav-links a {
-    padding: 7px 9px;
+    padding: 11px 12px;
     font-size: 0.9rem;
   }
 
