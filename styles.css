@@ -690,6 +690,51 @@ h3 {
   margin: 0;
 }
 
+/* Visual product-collection grid (ordering Step 1) */
+.order-browse {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 14px 0 6px;
+}
+
+.order-browse a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.order-browse figure {
+  margin: 0;
+}
+
+.order-browse img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 14px rgba(45, 34, 24, 0.08);
+  transition: transform 0.15s ease;
+}
+
+.order-browse a:hover img {
+  transform: translateY(-3px);
+}
+
+.order-browse figcaption {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 700px) {
+  .order-browse {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
