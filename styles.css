@@ -137,6 +137,48 @@ a {
   background: var(--cream);
 }
 
+/* Mobile menu toggle (hidden on desktop; shown by nav.js on small screens) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-toggle:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
 .section,
 .hero {
   width: min(1120px, calc(100% - 32px));
@@ -393,6 +435,227 @@ h3 {
   max-width: 720px;
   color: var(--muted);
   font-size: 1.12rem;
+}
+
+/* FAQ accordions */
+.faq .faq-group + .faq-group {
+  margin-top: 48px;
+}
+
+.faq .section-head {
+  margin-bottom: 18px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 8px 18px rgba(45, 34, 24, 0.06);
+}
+
+.faq-item + .faq-item {
+  margin-top: 12px;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 52px 18px 22px;
+  position: relative;
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--clay);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  content: '\2212';
+}
+
+.faq-item summary:hover {
+  color: var(--clay);
+}
+
+.faq-item summary:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.faq-answer {
+  padding: 0 22px 20px;
+  color: var(--muted);
+}
+
+.faq-answer p {
+  margin: 0 0 10px;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer ul {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+
+.faq-answer li {
+  margin: 4px 0;
+}
+
+/* Legal / prose pages */
+.legal {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0;
+}
+
+.legal h2 {
+  margin-top: 40px;
+  font-size: 1.5rem;
+}
+
+.legal p {
+  color: var(--muted);
+}
+
+.legal ul {
+  color: var(--muted);
+  padding-left: 22px;
+}
+
+.legal li {
+  margin: 6px 0;
+}
+
+.legal strong {
+  color: var(--ink);
+}
+
+/* Allergen tables */
+.allergen-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 12px;
+  font-size: 0.97rem;
+}
+
+.allergen-table th,
+.allergen-table td {
+  text-align: left;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.allergen-table thead th {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Fraunces', Georgia, "Times New Roman", serif;
+}
+
+.allergen-table tbody tr:nth-child(even) {
+  background: var(--paper);
+}
+
+.allergen-table td {
+  color: var(--muted);
+}
+
+.allergen-table td.has-allergen {
+  color: var(--clay);
+  font-weight: 700;
+}
+
+.tag-soft {
+  font-size: 0.8em;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Highlighted note block (allergen statement, etc.) */
+.callout-note {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--clay);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+}
+
+.callout-note p:first-child {
+  margin-top: 0;
+}
+
+.callout-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* Ordering steps */
+.order-steps {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 0 0 8px;
+}
+
+.order-step {
+  margin-bottom: 28px;
+}
+
+.order-step h2 {
+  margin-top: 0;
+}
+
+/* "How ordering works" callout near Request Info buttons */
+.order-callout {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 0 0 28px;
+}
+
+.order-callout h2 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.order-callout p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.order-callout .order-callout-link {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--clay);
+}
+
+.order-callout .order-callout-link:hover {
+  text-decoration: underline;
 }
 
 .product-grid {
@@ -1283,6 +1546,37 @@ textarea {
 
   .nav-links {
     justify-content: center;
+  }
+
+  /* When enhanced by nav.js, collapse into a hamburger menu */
+  .site-header.nav-js .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 78px;
+  }
+
+  .site-header.nav-js .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-header.nav-js .nav-links {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding-bottom: 12px;
+  }
+
+  .site-header.nav-js .nav-links.is-open {
+    display: flex;
+  }
+
+  .site-header.nav-js .nav-links a {
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 1rem;
   }
 
   .hero,
