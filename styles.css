@@ -554,8 +554,9 @@ h3 {
   color: var(--ink);
 }
 
-/* Allergen tables */
-.allergen-table {
+/* Data tables (allergen lists, shipping rates) */
+.allergen-table,
+.rate-table {
   width: 100%;
   border-collapse: collapse;
   margin: 8px 0 12px;
@@ -563,25 +564,34 @@ h3 {
 }
 
 .allergen-table th,
-.allergen-table td {
+.allergen-table td,
+.rate-table th,
+.rate-table td {
   text-align: left;
   padding: 10px 14px;
   border: 1px solid var(--line);
   vertical-align: top;
 }
 
-.allergen-table thead th {
+.allergen-table thead th,
+.rate-table thead th {
   background: var(--cream);
   color: var(--ink);
   font-family: 'Fraunces', Georgia, "Times New Roman", serif;
 }
 
-.allergen-table tbody tr:nth-child(even) {
+.allergen-table tbody tr:nth-child(even),
+.rate-table tbody tr:nth-child(even) {
   background: var(--paper);
 }
 
-.allergen-table td {
+.allergen-table td,
+.rate-table td {
   color: var(--muted);
+}
+
+.rate-table {
+  max-width: 420px;
 }
 
 .allergen-table td.has-allergen {
