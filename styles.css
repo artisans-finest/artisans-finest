@@ -554,6 +554,110 @@ h3 {
   color: var(--ink);
 }
 
+/* Allergen tables */
+.allergen-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 12px;
+  font-size: 0.97rem;
+}
+
+.allergen-table th,
+.allergen-table td {
+  text-align: left;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.allergen-table thead th {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Fraunces', Georgia, "Times New Roman", serif;
+}
+
+.allergen-table tbody tr:nth-child(even) {
+  background: var(--paper);
+}
+
+.allergen-table td {
+  color: var(--muted);
+}
+
+.allergen-table td.has-allergen {
+  color: var(--clay);
+  font-weight: 700;
+}
+
+.tag-soft {
+  font-size: 0.8em;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Highlighted note block (allergen statement, etc.) */
+.callout-note {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--clay);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+}
+
+.callout-note p:first-child {
+  margin-top: 0;
+}
+
+.callout-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* Ordering steps */
+.order-steps {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 0 0 8px;
+}
+
+.order-step {
+  margin-bottom: 28px;
+}
+
+.order-step h2 {
+  margin-top: 0;
+}
+
+/* "How ordering works" callout near Request Info buttons */
+.order-callout {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 0 0 28px;
+}
+
+.order-callout h2 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.order-callout p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.order-callout .order-callout-link {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--clay);
+}
+
+.order-callout .order-callout-link:hover {
+  text-decoration: underline;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
