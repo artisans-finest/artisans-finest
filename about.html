@@ -21,6 +21,7 @@
   <link rel="canonical" href="https://artisans-finest.github.io/artisans-finest/about.html">
   <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="nav.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -30,7 +31,12 @@
         <img src="images/logo.webp" alt="Artisan's Finest logo" width="1112" height="828" decoding="async">
         <span>Artisan's Finest</span>
       </a>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="nav-links" id="primary-nav">
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="recipes.html">Recipes</a>
