@@ -435,6 +435,7 @@
               <p class="dialog-price">$6.95 <span class="dialog-vol">&middot; Net wt approx. 3.5 oz (99 g)</span></p>
               <p>Inspired by the bold simplicity of Texas barbecue, this rub focuses on savory flavor and a balanced blend of chili powder, mustard, pepper, and spice. Built to enhance brisket, beef, pork, and chicken without overpowering them, it's a true pitmaster-style seasoning where great barbecue begins with the rub.</p>
               <p class="dialog-uses"><strong>Best On:</strong> Brisket, steaks, burgers, pork shoulder, smoked turkey.</p>
+              <img class="rub-img" src="images/rub-texas.webp" alt="Artisan's Finest Texas BBQ Rub" width="480" height="600" loading="lazy" decoding="async">
             </template>
           </article>
           <article class="flavor is-clickable">
@@ -447,6 +448,7 @@
               <p class="dialog-price">$6.95 <span class="dialog-vol">&middot; Net wt approx. 3.5 oz (99 g)</span></p>
               <p>Traditional Memphis barbecue is all about the rub. Sweet brown sugar, paprika, garlic, onion, and cayenne create a flavorful crust that's equally at home on ribs, pork shoulder, or chicken. Perfect for barbecue purists who appreciate great flavor without relying on sauce.</p>
               <p class="dialog-uses"><strong>Best On:</strong> Ribs, pork shoulder, chicken wings, smoked turkey.</p>
+              <img class="rub-img" src="images/rub-memphis.webp" alt="Artisan's Finest Memphis BBQ Rub" width="480" height="600" loading="lazy" decoding="async">
             </template>
           </article>
           <article class="flavor is-clickable">
@@ -459,6 +461,7 @@
               <p class="dialog-price">$6.95 <span class="dialog-vol">&middot; Net wt approx. 3.5 oz (99 g)</span></p>
               <p>Sweet, savory, and perfectly balanced, Kansas City captures the flavor profile that made Midwest barbecue famous. Brown sugar, paprika, garlic, and a touch of heat create a rich bark and deep flavor on everything from ribs and brisket to burnt ends and chicken.</p>
               <p class="dialog-uses"><strong>Best On:</strong> Ribs, brisket, burnt ends, pork chops, chicken.</p>
+              <img class="rub-img" src="images/rub-kansas-city.webp" alt="Artisan's Finest Kansas City BBQ Rub" width="480" height="600" loading="lazy" decoding="async">
             </template>
           </article>
           <article class="flavor is-clickable">
@@ -471,6 +474,7 @@
               <p class="dialog-price">$6.95 <span class="dialog-vol">&middot; Net wt approx. 3.5 oz (99 g)</span></p>
               <p>A tribute to one of America's oldest barbecue traditions. This blend combines brown sugar, pepper, cumin, and smoked paprika to create a balanced seasoning that enhances the natural flavor of pork while remaining versatile enough for beef, poultry, and vegetables.</p>
               <p class="dialog-uses"><strong>Best On:</strong> Pulled pork, pork tenderloin, chicken, turkey, roasted vegetables.</p>
+              <img class="rub-img" src="images/rub-carolina.webp" alt="Artisan's Finest Carolina BBQ Rub" width="480" height="600" loading="lazy" decoding="async">
             </template>
           </article>
           <article class="flavor is-clickable">
@@ -531,6 +535,7 @@
               <p class="dialog-price">$6.95 <span class="dialog-vol">&middot; Net wt approx. 3.5 oz (99 g)</span></p>
               <p>Smoky chipotle peppers, garlic, cumin, and paprika create a bold southwestern-inspired rub with layers of heat and complexity. The smoky character builds throughout the blend, making it one of the most robust and flavorful rubs in our collection.</p>
               <p class="dialog-uses"><strong>Best On:</strong> Chicken thighs, pork shoulder, tacos, fajitas, grilled vegetables.</p>
+              <img class="rub-img" src="images/rub-chipotle.webp" alt="Artisan's Finest Chipotle BBQ Rub" width="480" height="596" loading="lazy" decoding="async">
             </template>
           </article>
           <article class="flavor is-clickable">
@@ -567,6 +572,7 @@
               <p class="dialog-price">$6.95 <span class="dialog-vol">&middot; Net wt approx. 3.5 oz (99 g)</span></p>
               <p>Designed specifically for smokers and slow-cooked barbecue, Smokehouse delivers bold layers of smoky, savory flavor. Whether you're preparing wings, pulled pork, brisket, or even homemade potato chips, this blend brings authentic smokehouse character to every bite.</p>
               <p class="dialog-uses"><strong>Best On:</strong> Pork shoulder, wings, brisket, smoked potatoes, jerky.</p>
+              <img class="rub-img" src="images/rub-smokehouse.webp" alt="Artisan's Finest Smokehouse BBQ Rub" width="480" height="600" loading="lazy" decoding="async">
             </template>
           </article>
         </div>
@@ -1151,22 +1157,24 @@
             cta.className = 'button dialog-cta';
             cta.href = href;
             cta.textContent = 'Ask about availability';
-            // When the flavor includes a small product image (sausage blends),
-            // sit the image beside the availability button instead of stacking
-            // it, so the card reads as a compact image + action row.
-            var sausageImg = body.querySelector('.sausage-img');
-            if (sausageImg) {
+            // When the flavor includes a small product image (sausage blends,
+            // BBQ rubs), sit the image beside the availability button instead
+            // of stacking it, so the card reads as a compact image + action row.
+            var productImg = body.querySelector('.sausage-img, .rub-img');
+            if (productImg) {
               var actions = document.createElement('div');
               actions.className = 'dialog-actions';
-              sausageImg.parentNode.removeChild(sausageImg);
-              actions.appendChild(sausageImg);
-              // Stack a small "Fall 2026" launch banner over the CTA button.
+              productImg.parentNode.removeChild(productImg);
+              actions.appendChild(productImg);
               var ctaGroup = document.createElement('div');
               ctaGroup.className = 'dialog-cta-group';
-              var banner = document.createElement('span');
-              banner.className = 'fall-banner';
-              banner.textContent = 'Fall 2026';
-              ctaGroup.appendChild(banner);
+              // Sausage blends are a Fall 2026 launch — flag them with a banner.
+              if (productImg.classList.contains('sausage-img')) {
+                var banner = document.createElement('span');
+                banner.className = 'fall-banner';
+                banner.textContent = 'Fall 2026';
+                ctaGroup.appendChild(banner);
+              }
               ctaGroup.appendChild(cta);
               actions.appendChild(ctaGroup);
               body.appendChild(actions);
