@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Products | Artisan's Finest</title>
-  <meta name="description" content="Browse Artisan's Finest by category: vanilla and extracts, sugar- and salt-free seasonings, signature BBQ rubs, heritage sausage blends, and gift sets.">
+  <meta name="description" content="Browse Artisan's Finest by category: vanilla and extracts, sugar- and salt-free seasonings, signature BBQ rubs, heritage sausage blends, gift sets, and cookbook pre-orders.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Artisan's Finest">
   <meta property="og:title" content="Products | Artisan's Finest">
-  <meta property="og:description" content="Browse Artisan's Finest by category: vanilla and extracts, sugar- and salt-free seasonings, signature BBQ rubs, heritage sausage blends, and gift sets.">
+  <meta property="og:description" content="Browse Artisan's Finest by category: vanilla and extracts, sugar- and salt-free seasonings, signature BBQ rubs, heritage sausage blends, gift sets, and cookbook pre-orders.">
   <meta property="og:url" content="https://artisans-finest.github.io/artisans-finest/products.html">
   <meta property="og:image" content="https://artisans-finest.github.io/artisans-finest/images/share-card.png">
   <meta property="og:image:width" content="1200">
@@ -16,7 +16,7 @@
   <meta property="og:image:alt" content="Artisan's Finest logo">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Products | Artisan's Finest">
-  <meta name="twitter:description" content="Browse Artisan's Finest by category: vanilla and extracts, sugar- and salt-free seasonings, signature BBQ rubs, heritage sausage blends, and gift sets.">
+  <meta name="twitter:description" content="Browse Artisan's Finest by category: vanilla and extracts, sugar- and salt-free seasonings, signature BBQ rubs, heritage sausage blends, gift sets, and cookbook pre-orders.">
   <meta name="twitter:image" content="https://artisans-finest.github.io/artisans-finest/images/share-card.png">
   <link rel="canonical" href="https://artisans-finest.github.io/artisans-finest/products.html">
   <link rel="icon" href="images/favicon.png">
@@ -91,6 +91,13 @@
         <button class="tab" id="tab-gifts" role="tab" aria-selected="false" aria-controls="panel-gifts" tabindex="-1">
           <img src="images/gift-bundles-hero-v2.webp" alt="" width="1535" height="1024" loading="lazy" decoding="sync">
           <span>Gift Sets &amp; Bundles</span>
+        </button>
+        <button class="tab" id="tab-cookbooks" role="tab" aria-selected="false" aria-controls="panel-cookbooks" tabindex="-1">
+          <span class="tab-media">
+            <img src="images/recipe-bank.webp" alt="" width="1536" height="1024" loading="lazy" decoding="sync">
+            <span class="tab-banner">Pre-Orders Open</span>
+          </span>
+          <span>Cookbooks &amp; Pre-Orders</span>
         </button>
       </div>
 
@@ -1061,6 +1068,53 @@
         </div>
       </section>
 
+      <section id="panel-cookbooks" class="tab-panel" role="tabpanel" aria-labelledby="tab-cookbooks" tabindex="0">
+        <div class="tab-panel-head">
+          <h2>Cookbooks &amp; Pre-Orders</h2>
+          <p>Small-batch cookbooks from the Artisan's Finest kitchen, hand-numbered and signed. Use the <a href="contact.html">Request Info</a> form to reserve a copy and Chris &amp; Becky will follow up with details.</p>
+        </div>
+        <div class="flavor-grid">
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Holiday Cookbook</h3>
+              <span class="badge season">Pre-Order &middot; Christmas in July</span>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Holiday Cookbook</h3>
+              <p class="dialog-tag">A Limited First Edition for the Holiday Table.</p>
+              <p class="dialog-price">$19.95 pre-order <span class="dialog-vol">&middot; $24.95 regular</span></p>
+              <p>The Artisan's Finest Holiday Cookbook launches at the <a href="https://www.backporchvineyard.com/christmas-in-july" target="_blank" rel="noopener noreferrer">Christmas in July</a> event on July 18 at Backporch Vineyard in King George, VA. Pre-order now to reserve your copy from the limited First Edition run.</p>
+              <p class="dialog-uses"><strong>First Edition:</strong> Every "First Edition" copy is hand-numbered, signed, and includes a certificate of authenticity.</p>
+            </template>
+          </article>
+          <!--
+            TEASER CARD: Harvest & Hero's Cookbook advance orders are NOT open yet.
+            To flip this to a live listing when orders open:
+              1. Change the badge below from
+                   <span class="badge soon">Coming Soon &middot; Advance Orders</span>
+                 to
+                   <span class="badge season">Advance Orders Open</span>
+              2. In the <template>, replace the "Advance orders open soon..." sentence with:
+                 "Advance orders are open now &mdash; use the button below to reserve your copy."
+          -->
+          <article class="flavor is-clickable">
+            <button type="button" class="flavor-trigger" aria-haspopup="dialog">
+              <h3>Harvest &amp; Hero's Cookbook</h3>
+              <span class="badge soon">Coming Soon &middot; Advance Orders</span>
+              <span class="flavor-more">View details</span>
+            </button>
+            <template>
+              <h3>Harvest &amp; Hero's Cookbook</h3>
+              <p class="dialog-tag">ALL Proceeds Go to Charity.</p>
+              <p class="dialog-price">$15 pre-order <span class="dialog-vol">&middot; $20 day-of</span></p>
+              <p>Every copy supports a good cause: ALL proceeds benefit the non-profit sponsoring the <a href="https://www.nsvcveb.org/heroesharvest" target="_blank" rel="noopener noreferrer">Harvest and Heroes Festival</a> in Stephens City, VA on September 11. Advance orders open soon &mdash; ask below and we'll let you know the moment they do.</p>
+              <p class="dialog-uses"><strong>Edition:</strong> 25 copies, hand-numbered and signed &middot; 20 curated recipes.</p>
+            </template>
+          </article>
+        </div>
+      </section>
+
       <div class="note">For current batch availability, custom gift requests, or larger orders, use the request form and Chris &amp; Becky will follow up with details.</div>
     </section>
 
@@ -1154,7 +1208,8 @@
               'panel-vanilla': 'Vanilla extract',
               'panel-ssf': 'Seasoning blends',
               'panel-bbq': 'BBQ rubs',
-              'panel-sausage': 'Sausage blends'
+              'panel-sausage': 'Sausage blends',
+              'panel-cookbooks': 'Cookbooks'
             };
             var panel = trigger.closest('.tab-panel');
             var item = heading ? heading.textContent : '';
